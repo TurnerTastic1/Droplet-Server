@@ -19,6 +19,6 @@ public class RootHealthTest {
         System.out.println("Starting RootHealthTest...");
         mockMvc.perform(MockMvcRequestBuilders
                 .get("/"))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk()).toString();
     }
 }
