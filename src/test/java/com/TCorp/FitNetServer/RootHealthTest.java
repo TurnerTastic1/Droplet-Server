@@ -20,6 +20,5 @@ public class RootHealthTest {
         mockMvc.perform(MockMvcRequestBuilders
                 .get("/"))
                 .andExpect(status().isOk());
-        assertThat(true).isTrue();
     }
 }
