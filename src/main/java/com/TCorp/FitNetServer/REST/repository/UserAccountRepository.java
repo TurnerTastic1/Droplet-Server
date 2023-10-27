@@ -1,5 +1,6 @@
-package com.TCorp.FitNetServer.REST.account;
+package com.TCorp.FitNetServer.REST.repository;
 
+import com.TCorp.FitNetServer.REST.model.UserAccount;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

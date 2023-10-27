@@ -1,4 +1,4 @@
-package com.TCorp.FitNetServer.REST.account;
+package com.TCorp.FitNetServer.REST.model;
 
 import jakarta.persistence.*;
 
@@ -98,4 +98,6 @@ public class UserAccount {
     }
 
 
+    public static class Exercises {
+    }
 }
