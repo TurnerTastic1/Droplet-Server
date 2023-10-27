@@ -1,7 +1,7 @@
-package com.TCorp.FitNetServer.REST.service;
+package com.TCorp.FitNetServer.server.service;
 
-import com.TCorp.FitNetServer.REST.model.UserAccount;
-import com.TCorp.FitNetServer.REST.repository.UserAccountRepository;
+import com.TCorp.FitNetServer.server.model.UserAccount;
+import com.TCorp.FitNetServer.server.repository.UserAccountRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.TCorp.FitNetServer.REST.controller;
+package com.TCorp.FitNetServer.server.controller;
 
-import com.TCorp.FitNetServer.REST.service.UserAccountService;
+import com.TCorp.FitNetServer.server.service.UserAccountService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

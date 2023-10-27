@@ -1,4 +1,4 @@
-package com.TCorp.FitNetServer.REST.model;
+package com.TCorp.FitNetServer.server.model;
 
 import jakarta.persistence.*;
 
