@@ -1,7 +1,9 @@
 package com.TCorp.FitNetServer.server.service;
 
+import com.TCorp.FitNetServer.server.exception.RuntimeException;
 import com.TCorp.FitNetServer.server.model.UserAccount;
 import com.TCorp.FitNetServer.server.repository.UserAccountRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +24,7 @@ public class UserAccountService {
             List<UserAccount> UserAccounts = UserAccRepo.findAll();
             return ResponseEntity.ok(Map.of("message", "Users fetched successfully", "Users", UserAccounts));
         } catch (Exception e) {
-            throw e;
+            throw new RuntimeException("Unable to fetch users from database", HttpStatus.EXPECTATION_FAILED);
            // return ResponseEntity.ok(Map.of("message", "Unable to fetch users"));
         }
     }
