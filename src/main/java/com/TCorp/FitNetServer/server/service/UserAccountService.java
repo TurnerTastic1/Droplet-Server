@@ -3,10 +3,12 @@ package com.TCorp.FitNetServer.server.service;
 import com.TCorp.FitNetServer.server.exception.RuntimeException;
 import com.TCorp.FitNetServer.server.model.UserAccount;
 import com.TCorp.FitNetServer.server.repository.UserAccountRepository;
+import org.apache.catalina.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -29,7 +31,14 @@ public class UserAccountService {
         }
     }
 
-    public ResponseEntity<Map<String, Object>> registerNewUser() {
+    public ResponseEntity<Map<String, Object>> registerNewUser(UserAccount newUser) {
+        List<String> errors = new ArrayList<>();
+        if (newUser.getEmail() == null || newUser.getEmail().isEmpty()) {
+            errors.add("Email is required");
+        }
+        if (newUser.getName() == null || newUser.getName().isEmpty()) {
+            errors.add("Name is required");
+        }
         return ResponseEntity.ok(Map.of("message", "User added successfully"));
     }
 }
