@@ -6,10 +6,7 @@ import com.TCorp.FitNetServer.api.service.AuthService;
 import com.TCorp.FitNetServer.api.service.UserEntityService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -28,6 +25,11 @@ public class AuthController {
 
     public AuthController(AuthService AuthService) {
         this.AuthService = AuthService;
+    }
+
+    @PostMapping ("login")
+    public ResponseEntity<Map<String, Object>> login() {
+        return ResponseEntity.ok(Map.of("message", "Hello World from user controller!"));
     }
 
     @PostMapping("register-new-user")

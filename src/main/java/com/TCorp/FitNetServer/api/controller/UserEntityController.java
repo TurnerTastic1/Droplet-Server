@@ -19,7 +19,6 @@ public class UserEntityController {
 
     @GetMapping("health-check")
     public ResponseEntity<Map<String, Object>> hello() {
-        System.out.println("UserEntityController.hello()");
         return ResponseEntity.ok(Map.of("message", "Hello World from user controller!"));
     }
 
