@@ -1,7 +1,7 @@
 package com.TCorp.FitNetServer.api.service;
 
 import com.TCorp.FitNetServer.api.exception.RuntimeException;
-import com.TCorp.FitNetServer.api.model.UserAccount;
+import com.TCorp.FitNetServer.api.model.UserEntity;
 import com.TCorp.FitNetServer.api.repository.UserAccountRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,11 +13,11 @@ import java.util.Map;
 import java.util.Optional;
 
 @Service
-public class UserAccountService {
+public class UserEntityService {
 
     private final UserAccountRepository UserAccRepo;
 
-    public UserAccountService(UserAccountRepository UserAccRepo) {
+    public UserEntityService(UserAccountRepository UserAccRepo) {
         this.UserAccRepo = UserAccRepo;
     }
 
@@ -26,14 +26,14 @@ public class UserAccountService {
 
     public ResponseEntity<Map<String, Object>> getAllUsers() {
         try {
-            List<UserAccount> UserAccounts = UserAccRepo.findAll();
-            return ResponseEntity.ok(Map.of("message", "Users fetched successfully", "Users", UserAccounts));
+            List<UserEntity> userEntities = UserAccRepo.findAll();
+            return ResponseEntity.ok(Map.of("message", "Users fetched successfully", "Users", userEntities));
         } catch (Exception e) {
             throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to fetch users from database");
         }
     }
 
-    public ResponseEntity<Map<String, Object>> registerNewUser(UserAccount newUser) {
+    public ResponseEntity<Map<String, Object>> registerNewUser(UserEntity newUser) {
         List<String> errors = new ArrayList<>();
         if (newUser.getEmail() == null || newUser.getEmail().isEmpty()) {
             errors.add("Email is required");
@@ -45,7 +45,7 @@ public class UserAccountService {
             errors.add("Password is required");
         }
 
-        Optional<UserAccount> userAccountOptional = UserAccRepo.findUserAccountByEmailOrUsername(newUser.getEmail(), newUser.getUsername());
+        Optional<UserEntity> userAccountOptional = UserAccRepo.findUserAccountByEmailOrUsername(newUser.getEmail(), newUser.getUsername());
         if (userAccountOptional.isPresent()) {
             errors.add("Email or name already exists");
         }

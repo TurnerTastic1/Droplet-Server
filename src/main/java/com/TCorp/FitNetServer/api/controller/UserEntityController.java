@@ -1,7 +1,7 @@
 package com.TCorp.FitNetServer.api.controller;
 
-import com.TCorp.FitNetServer.api.model.UserAccount;
-import com.TCorp.FitNetServer.api.service.UserAccountService;
+import com.TCorp.FitNetServer.api.model.UserEntity;
+import com.TCorp.FitNetServer.api.service.UserEntityService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,11 +9,11 @@ import java.util.Map;
 
 @RestController
 @RequestMapping(path = "user/")
-public class UserAccountController {
+public class UserEntityController {
 
-    private final UserAccountService userAccService;
+    private final UserEntityService userAccService;
 
-    public UserAccountController(UserAccountService userAccService) {
+    public UserEntityController(UserEntityService userAccService) {
         this.userAccService = userAccService;
     }
 
@@ -28,7 +28,7 @@ public class UserAccountController {
     }
 
     @PostMapping("register-new-user")
-    public ResponseEntity<Map<String, Object>> registerNewUser(@RequestBody UserAccount newUser) {
+    public ResponseEntity<Map<String, Object>> registerNewUser(@RequestBody UserEntity newUser) {
         return userAccService.registerNewUser(newUser);
     }
 }
