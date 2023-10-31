@@ -23,7 +23,7 @@ public class UserAccountController {
     }
 
     @GetMapping("get-all-users")
-    public ResponseEntity<Map<String, Object>> geAlltUsers() {
+    public ResponseEntity<Map<String, Object>> getAllUsers() {
         return userAccService.getAllUsers();
     }
 
