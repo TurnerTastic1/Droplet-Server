@@ -19,16 +19,12 @@ public class UserEntityController {
 
     @GetMapping("health-check")
     public ResponseEntity<Map<String, Object>> hello() {
+        System.out.println("UserEntityController.hello()");
         return ResponseEntity.ok(Map.of("message", "Hello World from user controller!"));
     }
 
     @GetMapping("get-all-users")
     public ResponseEntity<Map<String, Object>> getAllUsers() {
         return userAccService.getAllUsers();
-    }
-
-    @PostMapping("register-new-user")
-    public ResponseEntity<Map<String, Object>> registerNewUser(@RequestBody UserEntity newUser) {
-        return userAccService.registerNewUser(newUser);
     }
 }
