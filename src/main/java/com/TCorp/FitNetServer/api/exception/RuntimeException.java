@@ -1,8 +1,7 @@
-package com.TCorp.FitNetServer.server.exception;
+package com.TCorp.FitNetServer.api.exception;
 
 import org.springframework.http.HttpStatus;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 

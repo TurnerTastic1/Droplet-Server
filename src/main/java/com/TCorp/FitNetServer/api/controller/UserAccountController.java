@@ -1,7 +1,7 @@
-package com.TCorp.FitNetServer.server.controller;
+package com.TCorp.FitNetServer.api.controller;
 
-import com.TCorp.FitNetServer.server.model.UserAccount;
-import com.TCorp.FitNetServer.server.service.UserAccountService;
+import com.TCorp.FitNetServer.api.model.UserAccount;
+import com.TCorp.FitNetServer.api.service.UserAccountService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

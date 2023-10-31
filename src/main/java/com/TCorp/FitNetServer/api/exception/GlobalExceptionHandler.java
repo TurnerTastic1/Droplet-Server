@@ -1,4 +1,4 @@
-package com.TCorp.FitNetServer.server.exception;
+package com.TCorp.FitNetServer.api.exception;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;

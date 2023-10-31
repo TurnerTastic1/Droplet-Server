@@ -1,12 +1,19 @@
-package com.TCorp.FitNetServer.server.config;
+package com.TCorp.FitNetServer.api.config;
 
-import com.TCorp.FitNetServer.server.model.UserAccount;
-import com.TCorp.FitNetServer.server.repository.UserAccountRepository;
+import com.TCorp.FitNetServer.api.model.UserAccount;
+import com.TCorp.FitNetServer.api.repository.UserAccountRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
+
+/**
+ * File: ApplicationConfig
+ * Author: turnernaef
+ * Date: 10/30/23
+ * Description:
+ */
 
 @Configuration
 public class ApplicationConfig {

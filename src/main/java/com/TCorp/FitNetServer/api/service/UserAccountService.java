@@ -1,13 +1,10 @@
-package com.TCorp.FitNetServer.server.service;
+package com.TCorp.FitNetServer.api.service;
 
-import com.TCorp.FitNetServer.server.exception.RuntimeException;
-import com.TCorp.FitNetServer.server.model.UserAccount;
-import com.TCorp.FitNetServer.server.repository.UserAccountRepository;
-import org.apache.catalina.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.TCorp.FitNetServer.api.exception.RuntimeException;
+import com.TCorp.FitNetServer.api.model.UserAccount;
+import com.TCorp.FitNetServer.api.repository.UserAccountRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,8 +21,8 @@ public class UserAccountService {
         this.UserAccRepo = UserAccRepo;
     }
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+//    @Autowired
+//    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public ResponseEntity<Map<String, Object>> getAllUsers() {
         try {
@@ -58,11 +55,12 @@ public class UserAccountService {
         }
 
         // Encode password
-        String encodedPassword = bCryptPasswordEncoder.encode(newUser.getPassword());
-        newUser.setPassword(encodedPassword);
+//        String encodedPassword = bCryptPasswordEncoder.encode(newUser.getPassword());
+//        newUser.setPassword(encodedPassword);
 
         try {
             UserAccRepo.save(newUser);
+            System.out.println(newUser);
             return ResponseEntity.ok(Map.of("message", "User added successfully"));
         } catch (Exception e) {
             errors = new ArrayList<>();

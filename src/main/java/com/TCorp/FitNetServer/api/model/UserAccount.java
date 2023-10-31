@@ -1,4 +1,4 @@
-package com.TCorp.FitNetServer.server.model;
+package com.TCorp.FitNetServer.api.model;
 
 import jakarta.persistence.*;
 
