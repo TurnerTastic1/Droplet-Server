@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class UserAccountService {
@@ -26,8 +27,7 @@ public class UserAccountService {
             List<UserAccount> UserAccounts = UserAccRepo.findAll();
             return ResponseEntity.ok(Map.of("message", "Users fetched successfully", "Users", UserAccounts));
         } catch (Exception e) {
-            throw new RuntimeException("Unable to fetch users from database", HttpStatus.EXPECTATION_FAILED);
-           // return ResponseEntity.ok(Map.of("message", "Unable to fetch users"));
+            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to fetch users from database");
         }
     }
 
@@ -39,6 +39,25 @@ public class UserAccountService {
         if (newUser.getName() == null || newUser.getName().isEmpty()) {
             errors.add("Name is required");
         }
+
+        Optional<UserAccount> userAccountOptional = UserAccRepo.findUserAccountByEmailOrName(newUser.getEmail(), newUser.getName());
+        if (userAccountOptional.isPresent()) {
+            errors.add("Email or name already exists");
+        }
+
+        if (!errors.isEmpty()) {
+            throw new RuntimeException(HttpStatus.BAD_REQUEST, "Unable to save user", errors);
+        }
+
+        try {
+            UserAccRepo.save(newUser);
+        } catch (Exception e) {
+            errors = new ArrayList<>();
+            errors.add(e.toString());
+            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to save user", errors);
+        }
+
+
         return ResponseEntity.ok(Map.of("message", "User added successfully"));
     }
 }

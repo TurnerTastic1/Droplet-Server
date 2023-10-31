@@ -2,31 +2,30 @@ package com.TCorp.FitNetServer.server.exception;
 
 import org.springframework.http.HttpStatus;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class RuntimeException extends java.lang.RuntimeException {
 
         private HttpStatus httpStatus;
-        private String message;
         private List<String> errors;
+        private Object data;
 
-        public RuntimeException(String message) {
-            this.message = message;
+        public RuntimeException(HttpStatus httpStatus, String message) {
+            this(httpStatus, message, Collections.singletonList(message), null);
         }
 
-        public RuntimeException(String message, HttpStatus httpStatus) {
-            this.message = message;
-            this.httpStatus = httpStatus;
+        public RuntimeException(HttpStatus httpStatus, String message, List<String> errors) {
+            this(httpStatus, message, errors, null);
         }
 
-        public RuntimeException(String message, HttpStatus httpStatus, List<String> errors) {
-            this.message = message;
+        public RuntimeException(HttpStatus httpStatus, String message, List<String> errors, Object data) {
+            super(message);
             this.httpStatus = httpStatus;
+//            this.message = message;
             this.errors = errors;
-        }
-
-        public String getMessage() {
-            return message;
+            this.data = data;
         }
 
         public HttpStatus getHttpStatus() {
@@ -36,5 +35,9 @@ public class RuntimeException extends java.lang.RuntimeException {
         public List<String> getErrors() {
         return errors;
     }
+
+        public Object getData() {
+            return data;
+        }
 
 }
