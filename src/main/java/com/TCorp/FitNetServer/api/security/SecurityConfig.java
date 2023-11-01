@@ -17,18 +17,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * File: SecurityConfig
  * Author: turnernaef
  * Date: 10/30/23
- * Description:
+ * Description: This class is used to configure the security of the application.
  */
 
 @Configuration
@@ -36,10 +30,12 @@ import java.util.List;
 public class SecurityConfig {
 
     private CustomUserDetailsService customUserDetailsService;
+    private JwtAuthEntry jwtAuthEntry;
 
     @Autowired
-    public SecurityConfig(CustomUserDetailsService customUserDetailsService) {
+    public SecurityConfig(CustomUserDetailsService customUserDetailsService, JwtAuthEntry jwtAuthEntry) {
         this.customUserDetailsService = customUserDetailsService;
+        this.jwtAuthEntry = jwtAuthEntry;
     }
 
     @Bean
@@ -65,23 +61,6 @@ public class SecurityConfig {
 //        source.registerCorsConfiguration("/**", configuration);
 //        return source;
 //    }
-
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails admin = User.builder()
-                .username("admin")
-                .password("password")
-                .roles("ADMIN")
-                .build();
-
-        UserDetails user = User.builder()
-                .username("user")
-                .password("password")
-                .roles("USER")
-                .build();
-
-        return new InMemoryUserDetailsManager(admin, user);
-    }
 
     @Bean
     public AuthenticationManager authenticationManager(

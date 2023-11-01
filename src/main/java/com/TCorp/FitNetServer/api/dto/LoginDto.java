@@ -3,14 +3,14 @@ package com.TCorp.FitNetServer.api.dto;
 import lombok.Data;
 
 /**
- * File: RegisterDto
+ * File: LoginDto
  * Author: turnernaef
- * Date: 10/31/23
- * Description: This class is used to transfer registration information from the client to the server.
+ * Date: 11/1/23
+ * Description: This class is used to transfer login information from the client to the server.
  */
 
 @Data
-public class RegisterDto {
+public class LoginDto {
     private String username;
     private String password;
     private String email;

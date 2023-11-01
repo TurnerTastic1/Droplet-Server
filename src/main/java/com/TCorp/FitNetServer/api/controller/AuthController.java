@@ -1,5 +1,6 @@
 package com.TCorp.FitNetServer.api.controller;
 
+import com.TCorp.FitNetServer.api.dto.LoginDto;
 import com.TCorp.FitNetServer.api.dto.RegisterDto;
 import com.TCorp.FitNetServer.api.model.UserEntity;
 import com.TCorp.FitNetServer.api.service.AuthService;
@@ -28,8 +29,8 @@ public class AuthController {
     }
 
     @PostMapping ("login")
-    public ResponseEntity<Map<String, Object>> login() {
-        return ResponseEntity.ok(Map.of("message", "Hello World from user controller!"));
+    public ResponseEntity<Map<String, Object>> login(@RequestBody LoginDto loginDto) {
+        return AuthService.login(loginDto);
     }
 
     @PostMapping("register-new-user")
