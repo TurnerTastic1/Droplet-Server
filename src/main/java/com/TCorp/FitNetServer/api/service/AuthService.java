@@ -17,7 +17,7 @@ import java.util.*;
  * File: AuthService
  * Author: turnernaef
  * Date: 10/31/23
- * Description:
+ * Description: This file contains the AuthService class, which is used to handle authentication requests.
  */
 
 @Service
@@ -37,14 +37,14 @@ public class AuthService {
         if (registerDto == null) {
             errors.add("Dto is required");
         }
-        if (UserEntityRepo.findUserEntityByUsername(registerDto.getUsername()).isPresent()) {
-            errors.add("Username already exists");
-        }
         if (registerDto.getUsername() == null || registerDto.getUsername().isEmpty()) {
             errors.add("Username is required");
         }
         if (registerDto.getPassword() == null || registerDto.getPassword().isEmpty()) {
             errors.add("Password is required");
+        }
+        if (UserEntityRepo.findUserEntityByUsername(registerDto.getUsername()).isPresent()) {
+            errors.add("Username already exists");
         }
 
 //        Optional<UserEntity> userAccountOptional = UserEntityRepo.findUserEntityByEmailOrUsername(newUser.getEmail(), newUser.getUsername());
@@ -56,20 +56,19 @@ public class AuthService {
             throw new RuntimeException(HttpStatus.BAD_REQUEST, "Unable to save user", errors);
         }
 
-        errors = new ArrayList<>();
-        // Encode password
-//        String encodedPassword = bCryptPasswordEncoder.encode(newUser.getPassword());
-//        newUser.setPassword(encodedPassword);
         UserEntity newUserEntity = new UserEntity();
         newUserEntity.setUsername(registerDto.getUsername());
         newUserEntity.setPassword(bCryptPasswordEncoder.encode(registerDto.getPassword()));
+        newUserEntity.setEmail(registerDto.getEmail());
 
-        Optional<Role> roles = roleRepository.findRoleByName("ROLE_USER");
+        Optional<Role> roles = roleRepository.findRoleByName("USER");
         if (roles.isEmpty()) {
-            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to save user", errors);
+            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to add user roles");
         }
 
         newUserEntity.setRoles(Collections.singletonList(roles.get()));
+
+        errors = new ArrayList<>();
 
         try {
             UserEntityRepo.save(newUserEntity);

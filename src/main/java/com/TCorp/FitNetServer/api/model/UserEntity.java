@@ -9,6 +9,13 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * File: UserEntity
+ * Author: turnernaef
+ * Date: 10/31/23
+ * Description: This class is used to create a table in the database that will hold the users and a separate table that will hold the roles of the users.
+ */
+
 @Getter
 @Setter
 @Entity
@@ -31,7 +38,6 @@ public class UserEntity {
     private String username;
     private String email;
     private String password;
-    private String type;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name = "user_roles",
