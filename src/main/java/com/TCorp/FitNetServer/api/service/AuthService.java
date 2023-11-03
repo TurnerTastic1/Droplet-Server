@@ -5,7 +5,7 @@ import com.TCorp.FitNetServer.api.dto.RegisterDto;
 import com.TCorp.FitNetServer.api.exception.RuntimeException;
 import com.TCorp.FitNetServer.api.model.Role;
 import com.TCorp.FitNetServer.api.model.UserEntity;
-import com.TCorp.FitNetServer.api.repository.RoleRepository;
+//import com.TCorp.FitNetServer.api.repository.RoleRepository;
 import com.TCorp.FitNetServer.api.repository.UserEntityRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,18 +30,15 @@ import java.util.*;
 public class AuthService {
 
     private final UserEntityRepository UserEntityRepo;
-    private final RoleRepository roleRepository;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
-    private final AuthenticationManager authenticationManager;
+//    private final RoleRepository roleRepository;
+//    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+//    private final AuthenticationManager authenticationManager;
 
-    public AuthService(UserEntityRepository UserEntityRepo,
-                       RoleRepository roleRepository,
-                       BCryptPasswordEncoder bCryptPasswordEncoder,
-                       AuthenticationManager authenticationManager) {
+    public AuthService(UserEntityRepository UserEntityRepo) {
         this.UserEntityRepo = UserEntityRepo;
-        this.roleRepository = roleRepository;
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-        this.authenticationManager = authenticationManager;
+//        this.roleRepository = roleRepository;
+//        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+//        this.authenticationManager = authenticationManager;
     }
     public ResponseEntity<Map<String, Object>> registerNewUser(RegisterDto registerDto) {
         List<String> errors = new ArrayList<>();
@@ -67,15 +64,15 @@ public class AuthService {
 
         UserEntity newUserEntity = new UserEntity();
         newUserEntity.setUsername(registerDto.getUsername());
-        newUserEntity.setPassword(bCryptPasswordEncoder.encode(registerDto.getPassword()));
+        newUserEntity.setPassword(registerDto.getPassword());
         newUserEntity.setEmail(registerDto.getEmail());
 
-        Optional<Role> roles = roleRepository.findRoleByName("USER");
-        if (roles.isEmpty()) {
-            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to add user roles");
-        }
+//        Optional<Role> role = roleRepository.findRoleByName("USER");
+//        if (role.isEmpty()) {
+//            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to add user roles");
+//        }
 
-        newUserEntity.setRoles(Collections.singletonList(roles.get()));
+        newUserEntity.setRole(Role.USER);
 
         errors = new ArrayList<>();
 
@@ -90,10 +87,10 @@ public class AuthService {
     }
 
     public ResponseEntity<Map<String, Object>> login(LoginDto loginDto) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(loginDto.getUsername(), loginDto.getPassword())
-        );
-        SecurityContextHolder.getContext().setAuthentication(authentication);
+//        Authentication authentication = authenticationManager.authenticate(
+//                new UsernamePasswordAuthenticationToken(loginDto.getUsername(), loginDto.getPassword())
+//        );
+//        SecurityContextHolder.getContext().setAuthentication(authentication);
 
         return ResponseEntity.ok(Map.of("message", "User logged in successfully"));
     }
