@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping(path = "user/")
+@RequestMapping(path = "/FitNetServer/api/v1/user/")
 public class UserEntityController {
 
     private final UserEntityService userAccService;

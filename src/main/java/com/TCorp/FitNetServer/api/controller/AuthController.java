@@ -19,7 +19,7 @@ import java.util.Map;
  */
 
 @RestController
-@RequestMapping(path = "auth/")
+@RequestMapping(path = "/FitNetServer/api/v1/auth/")
 public class AuthController {
 
     private final AuthService AuthService;

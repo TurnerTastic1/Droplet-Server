@@ -16,7 +16,7 @@ public class FitNetServerApplication {
 		SpringApplication.run(FitNetServerApplication.class, args);
 	}
 
-	@GetMapping("/")
+	@GetMapping("/FitNetServer/api/v1/root-welcome")
 	public List<String> hello() {
 		return List.of("Hello World! API is currently v1.");
 	}
