@@ -6,18 +6,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * File: RegisterDto
+ * File: AuthenticationDto
  * Author: turnernaef
- * Date: 10/31/23
- * Description: This class is used to transfer registration information from the client to the server.
+ * Date: 11/3/23
+ * Description:
  */
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterDto {
+public class AuthenticationDto {
     private String username;
     private String password;
-    private String email;
 }
