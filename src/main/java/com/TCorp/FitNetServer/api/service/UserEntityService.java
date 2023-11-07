@@ -1,16 +1,14 @@
 package com.TCorp.FitNetServer.api.service;
 
-import com.TCorp.FitNetServer.api.exception.RuntimeException;
+import com.TCorp.FitNetServer.api.exception.CustomException;
 import com.TCorp.FitNetServer.api.model.UserEntity;
 import com.TCorp.FitNetServer.api.repository.UserEntityRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @Service
 public class UserEntityService {
@@ -26,7 +24,7 @@ public class UserEntityService {
             List<UserEntity> userEntities = UserAccRepo.findAll();
             return ResponseEntity.ok(Map.of("message", "Users fetched successfully", "Users", userEntities));
         } catch (Exception e) {
-            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to fetch users from database");
+            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to fetch users from database");
         }
     }
 }

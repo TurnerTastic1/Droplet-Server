@@ -47,8 +47,8 @@ public class GlobalExceptionHandler implements ErrorController {
         return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).body(response);
     }
 
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<Map<String, Object>> handleError(RuntimeException e) {
+    @ExceptionHandler(CustomException.class)
+    public ResponseEntity<Map<String, Object>> handleError(CustomException e) {
         Map<String, Object> response = new HashMap<>();
         response.put("status", false);
         response.put("code", e.getHttpStatus().value());

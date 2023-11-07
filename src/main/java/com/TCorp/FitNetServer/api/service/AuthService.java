@@ -1,9 +1,8 @@
 package com.TCorp.FitNetServer.api.service;
 
 import com.TCorp.FitNetServer.api.dto.AuthenticationDto;
-import com.TCorp.FitNetServer.api.dto.LoginDto;
 import com.TCorp.FitNetServer.api.dto.RegisterDto;
-import com.TCorp.FitNetServer.api.exception.RuntimeException;
+import com.TCorp.FitNetServer.api.exception.CustomException;
 import com.TCorp.FitNetServer.api.model.Role;
 import com.TCorp.FitNetServer.api.model.UserEntity;
 import com.TCorp.FitNetServer.api.repository.UserEntityRepository;
@@ -19,6 +18,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * File: AuthService
@@ -30,6 +31,9 @@ import java.util.*;
 @Service
 @RequiredArgsConstructor
 public class AuthService {
+
+    Logger logger = LoggerFactory.getLogger(AuthService.class);
+
 
     private final UserEntityRepository UserEntityRepo;
     private final PasswordEncoder passwordEncoder;
@@ -55,7 +59,7 @@ public class AuthService {
         }
 
         if (!errors.isEmpty()) {
-            throw new RuntimeException(HttpStatus.BAD_REQUEST, "Unable to save user", errors);
+            throw new CustomException(HttpStatus.BAD_REQUEST, "Unable to save user", errors);
         }
 
         UserEntity newUserEntity = new UserEntity();
@@ -86,11 +90,16 @@ public class AuthService {
             );
         } catch (Exception e) {
             errors.add(e.toString());
-            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to save user", errors);
+            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to save user", errors);
         }
     }
 
     public ResponseEntity<Map<String, Object>> authenticate(AuthenticationDto authenticationDto) {
+//        logger.trace("Log level: TRACE");
+//        logger.info("Log level: INFO");
+//        logger.debug("Log level: DEBUG");
+//        logger.error("Log level: ERROR");
+//        logger.warn("Log level: WARN");
         List<String> errors = new ArrayList<>();
         if (authenticationDto == null) {
             errors.add("Dto is required");
@@ -103,17 +112,19 @@ public class AuthService {
         }
 
         if (!errors.isEmpty()) {
-            throw new RuntimeException(HttpStatus.BAD_REQUEST, "Unable to authenticate user", errors);
+            throw new CustomException(HttpStatus.BAD_REQUEST, "Unable to authenticate user", errors);
         }
 
         var newUserEntity = UserEntityRepo.findUserEntityByUsername(authenticationDto.getUsername())
-                .orElseThrow(() -> new RuntimeException(HttpStatus.BAD_REQUEST, "User not found"));
+                .orElseThrow(() -> new CustomException(HttpStatus.BAD_REQUEST, "User not found"));
 
         try {
             var authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(newUserEntity.getUsername(), newUserEntity.getPassword())
             );
+            logger.error("User authentication: " + authentication.toString());;
             SecurityContextHolder.getContext().setAuthentication(authentication);
+            logger.error("User authenticated successfully");
 
             var jwtToken = jwtService.generateToken(newUserEntity);
             return ResponseEntity.ok(
@@ -125,8 +136,9 @@ public class AuthService {
                     )
             );
         } catch (Exception e) {
+            e.printStackTrace();
             errors.add(e.toString());
-            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to authenticate user", errors);
+            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to authenticate user", errors);
         }
     }
 
