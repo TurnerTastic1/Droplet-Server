@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name = "completed_workouts")
 @Data
 @NoArgsConstructor
-public class CompletedWorkouts {
+public class CompletedWorkout {
 
     @Id
     @SequenceGenerator(
@@ -44,7 +44,6 @@ public class CompletedWorkouts {
     private String date;
 
     private Integer duration;
-    private Integer caloriesBurned;
     private Integer distance;
 
 
