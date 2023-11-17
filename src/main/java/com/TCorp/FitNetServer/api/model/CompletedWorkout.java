@@ -43,7 +43,7 @@ public class CompletedWorkout {
     private String description;
     private String date;
 
-    private Integer duration;
+    private Double duration;
     private Integer distance;
 
 

@@ -2,6 +2,7 @@ package com.TCorp.FitNetServer.api.controller;
 
 import com.TCorp.FitNetServer.api.dto.WorkoutDto;
 import com.TCorp.FitNetServer.api.service.UserWorkoutService;
+import jakarta.validation.Valid;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -25,11 +26,11 @@ public class UserWorkoutController {
 
     @GetMapping("/get-all-user-workouts")
     public ResponseEntity<Map<String, Object>> getAllUserWorkouts() {
-        return ResponseEntity.ok(Map.of("message", "Hello World from user workout controller!"));
+        return userWorkoutService.getAllUserWorkouts();
     }
 
     @PostMapping("/complete-workout")
-    public ResponseEntity<Map<String, Object>> completeWorkout(@RequestBody WorkoutDto workoutDto) {
+    public ResponseEntity<Map<String, Object>> completeWorkout(@Valid @RequestBody WorkoutDto workoutDto) {
         return userWorkoutService.completeWorkout(workoutDto);
     }
 }
