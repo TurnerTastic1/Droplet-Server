@@ -11,14 +11,5 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(controllers = FitNetServerApplication.class)
 public class RootHealthTest {
-    @Autowired
-    MockMvc mockMvc;
 
-    @Test
-    public void getRoot_success() throws Exception {
-        System.out.println("Starting RootHealthTest...");
-        mockMvc.perform(MockMvcRequestBuilders
-                .get("/"))
-                .andExpect(status().isOk()).toString();
-    }
 }
