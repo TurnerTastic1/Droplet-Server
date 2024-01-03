@@ -7,6 +7,7 @@ import com.TCorp.FitNetServer.api.repository.CompletedWorkoutRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class UserWorkoutService {
 
     private final CompletedWorkoutRepository completedWorkoutRepository;
 
+    @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
     public ResponseEntity<Map<String, Object>> getAllUserWorkouts() {
         try {
             List<CompletedWorkout> completedWorkouts = completedWorkoutRepository.findAll();
@@ -41,10 +43,6 @@ public class UserWorkoutService {
             errors.add("Dto is required");
         }
 
-        if (!errors.isEmpty()) {
-            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Error in logic before user save", errors);
-        }
-
         CompletedWorkout completedWorkout = new CompletedWorkout();
         completedWorkout.setName(workoutDto.getName());
         completedWorkout.setWorkoutType(workoutDto.getWorkoutType());
@@ -53,6 +51,11 @@ public class UserWorkoutService {
         completedWorkout.setDuration(workoutDto.getDuration());
         completedWorkout.setDistance(workoutDto.getDistance());
 
+        if (!errors.isEmpty()) {
+            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Error in logic before user save", errors);
+        }
+
+        errors = new ArrayList<>();
         try {
             completedWorkoutRepository.save(completedWorkout);
             return ResponseEntity.ok(Map.of("message", "Workout completed! Successfully saved to database."));

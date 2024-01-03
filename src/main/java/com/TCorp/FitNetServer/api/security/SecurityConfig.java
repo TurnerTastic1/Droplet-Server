@@ -36,7 +36,8 @@ public class SecurityConfig {
                 //.cors(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/FitNetServer/api/v1/**").permitAll()
+                                .requestMatchers("/FitNetServer/api/v1/auth/**").permitAll()
+                                .anyRequest().authenticated()
                 )
                 .sessionManagement((session) -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -74,7 +75,6 @@ public class AuthService {
 
         newUserEntity.setRole(Role.USER);
 
-        errors = new ArrayList<>();
 
         try {
             UserEntityRepo.save(newUserEntity);
@@ -95,11 +95,6 @@ public class AuthService {
     }
 
     public ResponseEntity<Map<String, Object>> authenticate(AuthenticationDto authenticationDto) {
-//        logger.trace("Log level: TRACE");
-//        logger.info("Log level: INFO");
-//        logger.debug("Log level: DEBUG");
-//        logger.error("Log level: ERROR");
-//        logger.warn("Log level: WARN");
         List<String> errors = new ArrayList<>();
         if (authenticationDto == null) {
             errors.add("Dto is required");
@@ -112,19 +107,24 @@ public class AuthService {
         }
 
         if (!errors.isEmpty()) {
-            throw new CustomException(HttpStatus.BAD_REQUEST, "Unable to authenticate user", errors);
+            throw new CustomException(HttpStatus.BAD_REQUEST, "Unable to authenticate user - missing some inputs", errors);
         }
 
-        var newUserEntity = UserEntityRepo.findUserEntityByUsername(authenticationDto.getUsername())
+        logger.info("Basic inputs passed");
+
+
+
+        var newUserEntity = UserEntityRepo.findUserEntityByEmailOrUsername(null, authenticationDto.getUsername())
                 .orElseThrow(() -> new CustomException(HttpStatus.BAD_REQUEST, "User not found"));
 
+
         try {
-            var authentication = authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(newUserEntity.getUsername(), newUserEntity.getPassword())
-            );
-            logger.error("User authentication: " + authentication.toString());;
+
+            Authentication authRequest = UsernamePasswordAuthenticationToken.unauthenticated(authenticationDto.getUsername(), authenticationDto.getPassword());
+            logger.info("User authentication: " + authRequest);
+            Authentication authentication = authenticationManager.authenticate(authRequest);
+
             SecurityContextHolder.getContext().setAuthentication(authentication);
-            logger.error("User authenticated successfully");
 
             var jwtToken = jwtService.generateToken(newUserEntity);
             return ResponseEntity.ok(
