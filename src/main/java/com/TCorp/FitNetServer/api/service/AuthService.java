@@ -110,16 +110,10 @@ public class AuthService {
             throw new CustomException(HttpStatus.BAD_REQUEST, "Unable to authenticate user - missing some inputs", errors);
         }
 
-        logger.info("Basic inputs passed");
-
-
-
         var newUserEntity = UserEntityRepo.findUserEntityByEmailOrUsername(null, authenticationDto.getUsername())
                 .orElseThrow(() -> new CustomException(HttpStatus.BAD_REQUEST, "User not found"));
 
-
         try {
-
             Authentication authRequest = UsernamePasswordAuthenticationToken.unauthenticated(authenticationDto.getUsername(), authenticationDto.getPassword());
             logger.info("User authentication: " + authRequest);
             Authentication authentication = authenticationManager.authenticate(authRequest);
@@ -136,18 +130,8 @@ public class AuthService {
                     )
             );
         } catch (Exception e) {
-            e.printStackTrace();
             errors.add(e.toString());
             throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to authenticate user", errors);
         }
     }
-
-//    public ResponseEntity<Map<String, Object>> login(LoginDto loginDto) {
-////        Authentication authentication = authenticationManager.authenticate(
-////                new UsernamePasswordAuthenticationToken(loginDto.getUsername(), loginDto.getPassword())
-////        );
-////        SecurityContextHolder.getContext().setAuthentication(authentication);
-//
-//        return ResponseEntity.ok(Map.of("message", "User logged in successfully"));
-//    }
 }

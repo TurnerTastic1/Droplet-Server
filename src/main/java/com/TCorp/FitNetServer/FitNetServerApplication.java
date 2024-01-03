@@ -18,7 +18,7 @@ public class FitNetServerApplication {
 		SpringApplication.run(FitNetServerApplication.class, args);
 	}
 
-	@GetMapping("/FitNetServer/api/v1/root")
+	@GetMapping("/FitNetServer/api/v1/root-status")
 	public ResponseEntity<Map<String, Object>> hello() {
 		Map<String, Object> apiData = Map.of("message", "Hello World!", "version", "V1");
 		return ResponseEntity.ok(Map.of("status", apiData));
