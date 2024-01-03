@@ -1,5 +1,6 @@
 package com.TCorp.FitNetServer;
 
+import com.TCorp.FitNetServer.api.response.ResponseGlobal;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +20,14 @@ public class FitNetServerApplication {
 	}
 
 	@GetMapping("/FitNetServer/api/v1/root-status")
-	public ResponseEntity<Map<String, Object>> hello() {
-		Map<String, Object> apiData = Map.of("message", "Hello World!", "version", "V1");
-		return ResponseEntity.ok(Map.of("status", apiData));
+	public ResponseEntity<ResponseGlobal> hello() {
+		Map<String, Object> apiData = Map.of( "version", "V1");
+		return ResponseEntity.ok(
+				ResponseGlobal.builder()
+						.message("Successfully retrieved root status")
+						.success(true)
+						.responsesMultiple(apiData)
+						.build()
+		);
 	}
 }

@@ -1,4 +1,4 @@
-package com.TCorp.FitNetServer.api.service;
+package com.TCorp.FitNetServer.api.auth;
 
 import com.TCorp.FitNetServer.api.dto.AuthenticationDto;
 import com.TCorp.FitNetServer.api.dto.RegisterDto;
@@ -6,7 +6,6 @@ import com.TCorp.FitNetServer.api.exception.CustomException;
 import com.TCorp.FitNetServer.api.model.Role;
 import com.TCorp.FitNetServer.api.model.UserEntity;
 import com.TCorp.FitNetServer.api.repository.UserEntityRepository;
-import com.TCorp.FitNetServer.api.response.AuthenticationResponse;
 import com.TCorp.FitNetServer.api.security.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -41,7 +40,7 @@ public class AuthService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
-    public ResponseEntity<Map<String, Object>> registerNewUser(RegisterDto registerDto) {
+    public AuthenticationResponse register(RegisterDto registerDto) {
         List<String> errors = new ArrayList<>();
         if (registerDto == null) {
             errors.add("Dto is required");
@@ -80,21 +79,16 @@ public class AuthService {
             UserEntityRepo.save(newUserEntity);
 
             var jwtToken = jwtService.generateToken(newUserEntity);
-            return ResponseEntity.ok(
-                    Map.of(
-                            "message", "User added successfully",
-                            "token", AuthenticationResponse.builder()
-                                    .token(jwtToken)
-                                    .build()
-                            )
-            );
+            return AuthenticationResponse.builder()
+                    .accessToken(jwtToken)
+                    .build();
         } catch (Exception e) {
             errors.add(e.toString());
             throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to save user", errors);
         }
     }
 
-    public ResponseEntity<Map<String, Object>> authenticate(AuthenticationDto authenticationDto) {
+    public AuthenticationResponse authenticate(AuthenticationDto authenticationDto) {
         List<String> errors = new ArrayList<>();
         if (authenticationDto == null) {
             errors.add("Dto is required");
@@ -121,14 +115,9 @@ public class AuthService {
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
             var jwtToken = jwtService.generateToken(newUserEntity);
-            return ResponseEntity.ok(
-                    Map.of(
-                            "message", "User authenticated successfully",
-                            "token", AuthenticationResponse.builder()
-                                    .token(jwtToken)
-                                    .build()
-                    )
-            );
+            return AuthenticationResponse.builder()
+                    .accessToken(jwtToken)
+                    .build();
         } catch (Exception e) {
             errors.add(e.toString());
             throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to authenticate user", errors);

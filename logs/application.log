@@ -1157,3 +1157,807 @@ org.springframework.security.core.userdetails.UsernameNotFoundException: Usernam
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
 	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
 
+2024-01-03T15:07:44.305-05:00  INFO 9290 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:07:44.321-05:00  INFO 9290 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:07:44.323-05:00  INFO 9290 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:07:46.096-05:00  INFO 9707 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 9707 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:07:46.098-05:00  INFO 9707 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:07:46.373-05:00  INFO 9707 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:07:46.398-05:00  INFO 9707 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:07:46.625-05:00  INFO 9707 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:07:46.628-05:00  INFO 9707 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:07:46.629-05:00  INFO 9707 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:07:46.661-05:00  INFO 9707 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:07:46.661-05:00  INFO 9707 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 542 ms
+2024-01-03T15:07:46.712-05:00  INFO 9707 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:07:46.741-05:00  INFO 9707 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:07:46.742-05:00  INFO 9707 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:07:46.787-05:00  INFO 9707 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:07:46.852-05:00  INFO 9707 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:07:46.861-05:00  INFO 9707 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:07:46.913-05:00  INFO 9707 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d7f8467
+2024-01-03T15:07:46.914-05:00  INFO 9707 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:07:47.004-05:00  INFO 9707 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:07:47.283-05:00  INFO 9707 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:07:47.290-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:07:47.290-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:07:47.290-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:07:47.290-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:07:47.290-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:07:47.290-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:07:47.291-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:07:47.291-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:07:47.291-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:07:47.291-05:00  WARN 9707 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:07:47.307-05:00  INFO 9707 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:07:47.515-05:00  WARN 9707 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:07:47.631-05:00  INFO 9707 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f847d9e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d00e981, org.springframework.security.web.context.SecurityContextHolderFilter@3e755d5f, org.springframework.security.web.header.HeaderWriterFilter@77fecd2c, org.springframework.security.web.authentication.logout.LogoutFilter@5cea47a1, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@e1c91cd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4202276, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38b7004d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6265a548, org.springframework.security.web.session.SessionManagementFilter@2b18b308, org.springframework.security.web.access.ExceptionTranslationFilter@3f267e1b, org.springframework.security.web.access.intercept.AuthorizationFilter@402c415e]
+2024-01-03T15:07:47.727-05:00  INFO 9707 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:07:47.732-05:00  INFO 9707 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.815 seconds (process running for 2.076)
+2024-01-03T15:07:51.689-05:00  INFO 9707 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:07:51.690-05:00  INFO 9707 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:07:51.691-05:00  INFO 9707 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:07:59.211-05:00  INFO 9707 --- [http-nio-8080-exec-4] c.T.FitNetServer.api.auth.AuthService    : User authentication: UsernamePasswordAuthenticationToken [Principal=testuser, Credentials=[PROTECTED], Authenticated=false, Details=null, Granted Authorities=[]]
+2024-01-03T15:09:27.310-05:00  INFO 9707 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:09:27.324-05:00  INFO 9707 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:09:27.325-05:00  INFO 9707 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:09:29.562-05:00  INFO 9813 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 9813 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:09:29.567-05:00  INFO 9813 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:09:29.850-05:00  INFO 9813 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:09:29.876-05:00  INFO 9813 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:09:30.123-05:00  INFO 9813 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:09:30.128-05:00  INFO 9813 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:09:30.139-05:00  INFO 9813 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:09:30.176-05:00  INFO 9813 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:09:30.176-05:00  INFO 9813 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 586 ms
+2024-01-03T15:09:30.239-05:00  INFO 9813 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:09:30.266-05:00  INFO 9813 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:09:30.267-05:00  INFO 9813 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:09:30.314-05:00  INFO 9813 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:09:30.387-05:00  INFO 9813 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:09:30.395-05:00  INFO 9813 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:09:30.441-05:00  INFO 9813 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29bd85db
+2024-01-03T15:09:30.442-05:00  INFO 9813 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:09:30.536-05:00  INFO 9813 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:09:30.821-05:00  INFO 9813 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:09:30.827-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:09:30.828-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:09:30.828-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:09:30.828-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:09:30.828-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:09:30.828-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:09:30.828-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:09:30.828-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:09:30.829-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:09:30.829-05:00  WARN 9813 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:09:30.848-05:00  INFO 9813 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:09:31.044-05:00  WARN 9813 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:09:31.159-05:00  INFO 9813 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@402c415e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e322108, org.springframework.security.web.context.SecurityContextHolderFilter@2b18b308, org.springframework.security.web.header.HeaderWriterFilter@707b38a1, org.springframework.security.web.authentication.logout.LogoutFilter@1d7d968c, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@50f6ecab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e015ac1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2053b761, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f5e64c9, org.springframework.security.web.session.SessionManagementFilter@7c1c0892, org.springframework.security.web.access.ExceptionTranslationFilter@726e29d, org.springframework.security.web.access.intercept.AuthorizationFilter@391b03b]
+2024-01-03T15:09:31.255-05:00  INFO 9813 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:09:31.260-05:00  INFO 9813 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.88 seconds (process running for 2.128)
+2024-01-03T15:09:40.971-05:00  INFO 9813 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:09:40.971-05:00  INFO 9813 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:09:40.972-05:00  INFO 9813 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:09:48.642-05:00  INFO 9813 --- [http-nio-8080-exec-3] c.T.FitNetServer.api.auth.AuthService    : User authentication: UsernamePasswordAuthenticationToken [Principal=testuser, Credentials=[PROTECTED], Authenticated=false, Details=null, Granted Authorities=[]]
+2024-01-03T15:13:24.899-05:00  INFO 9813 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:13:24.923-05:00  INFO 9813 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:13:24.924-05:00  INFO 9813 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:13:47.879-05:00  INFO 9964 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 9964 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:13:47.882-05:00  INFO 9964 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:13:48.159-05:00  INFO 9964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:13:48.184-05:00  INFO 9964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:13:48.409-05:00  INFO 9964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:13:48.413-05:00  INFO 9964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:13:48.414-05:00  INFO 9964 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:13:48.448-05:00  INFO 9964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:13:48.449-05:00  INFO 9964 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
+2024-01-03T15:13:48.504-05:00  INFO 9964 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:13:48.529-05:00  INFO 9964 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:13:48.530-05:00  INFO 9964 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:13:48.587-05:00  INFO 9964 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:13:48.655-05:00  INFO 9964 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:13:48.664-05:00  INFO 9964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:13:48.718-05:00  INFO 9964 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ddeb27f
+2024-01-03T15:13:48.719-05:00  INFO 9964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:13:48.816-05:00  INFO 9964 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:13:49.141-05:00  INFO 9964 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:13:49.149-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:13:49.149-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:13:49.149-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:13:49.150-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:13:49.150-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:13:49.150-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:13:49.150-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:13:49.150-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:13:49.150-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:13:49.150-05:00  WARN 9964 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:13:49.167-05:00  INFO 9964 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:13:49.379-05:00  WARN 9964 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:13:49.506-05:00  INFO 9964 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2053b761, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34588991, org.springframework.security.web.context.SecurityContextHolderFilter@6c930e7e, org.springframework.security.web.header.HeaderWriterFilter@2aa65672, org.springframework.security.web.authentication.logout.LogoutFilter@21f94fe3, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@69e8b711, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24d097c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48928b57, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d01b609, org.springframework.security.web.session.SessionManagementFilter@64cec4d0, org.springframework.security.web.access.ExceptionTranslationFilter@23eb6d13, org.springframework.security.web.access.intercept.AuthorizationFilter@3e755d5f]
+2024-01-03T15:13:49.618-05:00  INFO 9964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:13:49.622-05:00  INFO 9964 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.928 seconds (process running for 2.219)
+2024-01-03T15:13:57.000-05:00  INFO 9964 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:13:57.000-05:00  INFO 9964 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:13:57.001-05:00  INFO 9964 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:19:21.733-05:00  INFO 9964 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:19:21.747-05:00  INFO 9964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:19:21.748-05:00  INFO 9964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:19:24.121-05:00  INFO 10145 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 10145 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:19:24.128-05:00  INFO 10145 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:19:24.404-05:00  INFO 10145 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:19:24.429-05:00  INFO 10145 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:19:24.667-05:00  INFO 10145 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:19:24.672-05:00  INFO 10145 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:19:24.672-05:00  INFO 10145 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:19:24.708-05:00  INFO 10145 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:19:24.708-05:00  INFO 10145 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 557 ms
+2024-01-03T15:19:24.762-05:00  INFO 10145 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:19:24.790-05:00  INFO 10145 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:19:24.791-05:00  INFO 10145 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:19:24.839-05:00  INFO 10145 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:19:24.904-05:00  INFO 10145 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:19:24.913-05:00  INFO 10145 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:19:24.964-05:00  INFO 10145 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a056b26
+2024-01-03T15:19:24.965-05:00  INFO 10145 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:19:25.065-05:00  INFO 10145 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:19:25.347-05:00  INFO 10145 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:19:25.353-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:19:25.354-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:19:25.354-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:19:25.354-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:19:25.354-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:19:25.354-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:19:25.355-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:19:25.355-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:19:25.355-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:19:25.355-05:00  WARN 10145 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:19:25.373-05:00  INFO 10145 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:19:25.570-05:00  WARN 10145 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:19:25.695-05:00  INFO 10145 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f8b48c3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2af31aba, org.springframework.security.web.context.SecurityContextHolderFilter@1fb61db4, org.springframework.security.web.header.HeaderWriterFilter@2053b761, org.springframework.security.web.authentication.logout.LogoutFilter@67730dab, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@e344f14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2eb9c7ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@672f69f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@682d8dad, org.springframework.security.web.session.SessionManagementFilter@77aeba9b, org.springframework.security.web.access.ExceptionTranslationFilter@501b296a, org.springframework.security.web.access.intercept.AuthorizationFilter@4028aab2]
+2024-01-03T15:19:25.796-05:00  INFO 10145 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:19:25.800-05:00  INFO 10145 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.86 seconds (process running for 2.132)
+2024-01-03T15:19:36.469-05:00  INFO 10145 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:19:36.469-05:00  INFO 10145 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:19:36.471-05:00  INFO 10145 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-03T15:24:24.547-05:00  INFO 10145 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:24:24.569-05:00  INFO 10145 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:24:24.570-05:00  INFO 10145 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:24:26.916-05:00  INFO 10349 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 10349 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:24:26.918-05:00  INFO 10349 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:24:27.209-05:00  INFO 10349 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:24:27.235-05:00  INFO 10349 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:24:27.513-05:00  INFO 10349 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:24:27.518-05:00  INFO 10349 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:24:27.518-05:00  INFO 10349 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:24:27.557-05:00  INFO 10349 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:24:27.558-05:00  INFO 10349 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 620 ms
+2024-01-03T15:24:27.611-05:00  INFO 10349 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:24:27.634-05:00  INFO 10349 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:24:27.635-05:00  INFO 10349 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:24:27.687-05:00  INFO 10349 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:24:27.758-05:00  INFO 10349 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:24:27.767-05:00  INFO 10349 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:24:27.819-05:00  INFO 10349 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a056b26
+2024-01-03T15:24:27.819-05:00  INFO 10349 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:24:27.922-05:00  INFO 10349 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:24:28.213-05:00  INFO 10349 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:24:28.220-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:28.220-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:24:28.221-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:28.221-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:24:28.222-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:28.222-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:24:28.222-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:28.222-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:24:28.222-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:28.222-05:00  WARN 10349 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:24:28.241-05:00  INFO 10349 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:24:28.449-05:00  WARN 10349 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:24:28.575-05:00  INFO 10349 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ca9d3b2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f8b48c3, org.springframework.security.web.context.SecurityContextHolderFilter@64d1f549, org.springframework.security.web.header.HeaderWriterFilter@4202276, org.springframework.security.web.authentication.logout.LogoutFilter@28f3a218, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@e344f14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d4e06bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74b521c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2af31aba, org.springframework.security.web.session.SessionManagementFilter@3b18009f, org.springframework.security.web.access.ExceptionTranslationFilter@3e755d5f, org.springframework.security.web.access.intercept.AuthorizationFilter@489b7559]
+2024-01-03T15:24:28.690-05:00  INFO 10349 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:24:28.695-05:00  INFO 10349 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.981 seconds (process running for 2.27)
+2024-01-03T15:24:32.607-05:00  INFO 10349 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:24:32.609-05:00  INFO 10349 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:24:32.610-05:00  INFO 10349 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:24:53.999-05:00  INFO 10349 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:24:54.009-05:00  INFO 10349 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:24:54.010-05:00  INFO 10349 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:24:55.691-05:00  INFO 10376 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 10376 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:24:55.694-05:00  INFO 10376 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:24:55.992-05:00  INFO 10376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:24:56.017-05:00  INFO 10376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:24:56.238-05:00  INFO 10376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:24:56.242-05:00  INFO 10376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:24:56.242-05:00  INFO 10376 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:24:56.276-05:00  INFO 10376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:24:56.276-05:00  INFO 10376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 561 ms
+2024-01-03T15:24:56.332-05:00  INFO 10376 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:24:56.380-05:00  INFO 10376 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:24:56.382-05:00  INFO 10376 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:24:56.436-05:00  INFO 10376 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:24:56.505-05:00  INFO 10376 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:24:56.514-05:00  INFO 10376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:24:56.562-05:00  INFO 10376 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2eb1c615
+2024-01-03T15:24:56.562-05:00  INFO 10376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:24:56.652-05:00  INFO 10376 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:24:56.960-05:00  INFO 10376 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:24:56.969-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:56.970-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:24:56.970-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:56.971-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:24:56.971-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:56.971-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:24:56.971-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:56.971-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:24:56.973-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:24:56.973-05:00  WARN 10376 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:24:56.992-05:00  INFO 10376 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:24:57.215-05:00  WARN 10376 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:24:57.336-05:00  INFO 10376 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4202276, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2053b761, org.springframework.security.web.context.SecurityContextHolderFilter@45e9db77, org.springframework.security.web.header.HeaderWriterFilter@48a38a12, org.springframework.security.web.authentication.logout.LogoutFilter@6a30f6b1, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@d99df7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e69bf78, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68dc2f53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34588991, org.springframework.security.web.session.SessionManagementFilter@3f22ce2a, org.springframework.security.web.access.ExceptionTranslationFilter@45482f82, org.springframework.security.web.access.intercept.AuthorizationFilter@2e015ac1]
+2024-01-03T15:24:57.445-05:00  INFO 10376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:24:57.450-05:00  INFO 10376 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.935 seconds (process running for 2.202)
+2024-01-03T15:25:00.378-05:00  INFO 10376 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:25:00.385-05:00  INFO 10376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:25:00.385-05:00  INFO 10376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-01-03T15:25:48.230-05:00  INFO 10376 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:25:48.242-05:00  INFO 10376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:25:48.243-05:00  INFO 10376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:26:13.984-05:00  INFO 10451 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 10451 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:26:13.986-05:00  INFO 10451 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:26:14.274-05:00  INFO 10451 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:26:14.301-05:00  INFO 10451 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:26:14.521-05:00  INFO 10451 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:26:14.525-05:00  INFO 10451 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:26:14.525-05:00  INFO 10451 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:26:14.560-05:00  INFO 10451 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:26:14.561-05:00  INFO 10451 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 552 ms
+2024-01-03T15:26:14.618-05:00  INFO 10451 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:26:14.641-05:00  INFO 10451 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:26:14.642-05:00  INFO 10451 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:26:14.692-05:00  INFO 10451 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:26:14.754-05:00  INFO 10451 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:26:14.762-05:00  INFO 10451 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:26:14.818-05:00  INFO 10451 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ab63838
+2024-01-03T15:26:14.818-05:00  INFO 10451 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:26:14.913-05:00  INFO 10451 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:26:15.210-05:00  INFO 10451 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:26:15.219-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:15.220-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:26:15.220-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:15.220-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:26:15.220-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:15.220-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:26:15.221-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:15.221-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:26:15.221-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:15.221-05:00  WARN 10451 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:26:15.241-05:00  INFO 10451 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:26:15.444-05:00  WARN 10451 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:26:15.562-05:00  INFO 10451 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@496c6d94, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@360d3f47, org.springframework.security.web.context.SecurityContextHolderFilter@458704ee, org.springframework.security.web.header.HeaderWriterFilter@7c1c0892, org.springframework.security.web.authentication.logout.LogoutFilter@402c415e, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@4536a09a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5243d730, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77aeba9b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1693d505, org.springframework.security.web.session.SessionManagementFilter@38b7004d, org.springframework.security.web.access.ExceptionTranslationFilter@52ab003b, org.springframework.security.web.access.intercept.AuthorizationFilter@67730dab]
+2024-01-03T15:26:15.665-05:00  INFO 10451 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:26:15.670-05:00  INFO 10451 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.92 seconds (process running for 2.206)
+2024-01-03T15:26:17.479-05:00  INFO 10451 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:26:17.479-05:00  INFO 10451 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:26:17.480-05:00  INFO 10451 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:26:31.221-05:00  INFO 10451 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:26:31.233-05:00  INFO 10451 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:26:31.234-05:00  INFO 10451 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:26:32.887-05:00  INFO 10473 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 10473 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:26:32.890-05:00  INFO 10473 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:26:33.190-05:00  INFO 10473 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:26:33.215-05:00  INFO 10473 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:26:33.441-05:00  INFO 10473 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:26:33.445-05:00  INFO 10473 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:26:33.446-05:00  INFO 10473 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:26:33.479-05:00  INFO 10473 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:26:33.479-05:00  INFO 10473 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 559 ms
+2024-01-03T15:26:33.538-05:00  INFO 10473 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:26:33.564-05:00  INFO 10473 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:26:33.565-05:00  INFO 10473 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:26:33.611-05:00  INFO 10473 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:26:33.676-05:00  INFO 10473 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:26:33.685-05:00  INFO 10473 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:26:33.737-05:00  INFO 10473 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a056b26
+2024-01-03T15:26:33.738-05:00  INFO 10473 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:26:33.835-05:00  INFO 10473 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:26:34.108-05:00  INFO 10473 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:26:34.115-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:34.115-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:26:34.115-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:34.115-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:26:34.116-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:34.116-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:26:34.116-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:34.116-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:26:34.117-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:26:34.117-05:00  WARN 10473 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:26:34.136-05:00  INFO 10473 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:26:34.327-05:00  WARN 10473 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:26:34.441-05:00  INFO 10473 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4529048e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6addfa22, org.springframework.security.web.context.SecurityContextHolderFilter@65f36591, org.springframework.security.web.header.HeaderWriterFilter@2f69d246, org.springframework.security.web.authentication.logout.LogoutFilter@458704ee, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@e344f14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72b6fa98, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@726e29d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74b521c, org.springframework.security.web.session.SessionManagementFilter@6eae3730, org.springframework.security.web.access.ExceptionTranslationFilter@7e69bf78, org.springframework.security.web.access.intercept.AuthorizationFilter@1fb61db4]
+2024-01-03T15:26:34.551-05:00  INFO 10473 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:26:34.556-05:00  INFO 10473 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.859 seconds (process running for 2.134)
+2024-01-03T15:26:37.372-05:00  INFO 10473 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:26:37.376-05:00  INFO 10473 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:26:37.378-05:00  INFO 10473 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:27:10.896-05:00  INFO 10473 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:27:10.904-05:00  INFO 10473 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:27:10.905-05:00  INFO 10473 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:27:12.557-05:00  INFO 10523 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 10523 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:27:12.559-05:00  INFO 10523 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:27:12.879-05:00  INFO 10523 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:27:12.904-05:00  INFO 10523 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:27:13.127-05:00  INFO 10523 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:27:13.133-05:00  INFO 10523 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:27:13.133-05:00  INFO 10523 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:27:13.171-05:00  INFO 10523 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:27:13.171-05:00  INFO 10523 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 583 ms
+2024-01-03T15:27:13.227-05:00  INFO 10523 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:27:13.251-05:00  INFO 10523 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:27:13.253-05:00  INFO 10523 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:27:13.302-05:00  INFO 10523 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:27:13.376-05:00  INFO 10523 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:27:13.385-05:00  INFO 10523 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:27:13.442-05:00  INFO 10523 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2eb1c615
+2024-01-03T15:27:13.443-05:00  INFO 10523 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:27:13.537-05:00  INFO 10523 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:27:13.819-05:00  INFO 10523 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:27:13.826-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:27:13.826-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:27:13.827-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:27:13.827-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:27:13.827-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:27:13.827-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:27:13.827-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:27:13.827-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:27:13.828-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:27:13.828-05:00  WARN 10523 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:27:13.846-05:00  INFO 10523 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:27:14.041-05:00  WARN 10523 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:27:14.157-05:00  INFO 10523 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4e322108, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f5e64c9, org.springframework.security.web.context.SecurityContextHolderFilter@37dc7661, org.springframework.security.web.header.HeaderWriterFilter@3f267e1b, org.springframework.security.web.authentication.logout.LogoutFilter@10df1f34, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@d99df7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e755d5f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34588991, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f847d9e, org.springframework.security.web.session.SessionManagementFilter@1771d6a5, org.springframework.security.web.access.ExceptionTranslationFilter@a1e578f, org.springframework.security.web.access.intercept.AuthorizationFilter@4a977146]
+2024-01-03T15:27:14.259-05:00  INFO 10523 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:27:14.263-05:00  INFO 10523 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.879 seconds (process running for 2.13)
+2024-01-03T15:27:23.614-05:00  INFO 10523 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:27:23.618-05:00  INFO 10523 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:27:23.619-05:00  INFO 10523 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:34:34.022-05:00  INFO 10523 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:34:34.046-05:00  INFO 10523 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:34:34.048-05:00  INFO 10523 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:34:35.874-05:00  INFO 10760 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 10760 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:34:35.880-05:00  INFO 10760 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:34:36.190-05:00  INFO 10760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:34:36.218-05:00  INFO 10760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:34:36.433-05:00  INFO 10760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:34:36.436-05:00  INFO 10760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:34:36.437-05:00  INFO 10760 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:34:36.471-05:00  INFO 10760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:34:36.473-05:00  INFO 10760 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 571 ms
+2024-01-03T15:34:36.535-05:00  INFO 10760 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:34:36.565-05:00  INFO 10760 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:34:36.566-05:00  INFO 10760 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:34:36.611-05:00  INFO 10760 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:34:36.680-05:00  INFO 10760 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:34:36.687-05:00  INFO 10760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:34:36.745-05:00  INFO 10760 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ab63838
+2024-01-03T15:34:36.746-05:00  INFO 10760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:34:36.836-05:00  INFO 10760 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:34:37.110-05:00  INFO 10760 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:34:37.117-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:34:37.117-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:34:37.118-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:34:37.118-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:34:37.118-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:34:37.118-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:34:37.118-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:34:37.118-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:34:37.118-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:34:37.119-05:00  WARN 10760 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:34:37.141-05:00  INFO 10760 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:34:37.340-05:00  WARN 10760 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:34:37.460-05:00  INFO 10760 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d195d15, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17b387ef, org.springframework.security.web.context.SecurityContextHolderFilter@15afebcc, org.springframework.security.web.header.HeaderWriterFilter@2b18b308, org.springframework.security.web.authentication.logout.LogoutFilter@1f847d9e, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@4536a09a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b18009f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fb61db4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@489b7559, org.springframework.security.web.session.SessionManagementFilter@458704ee, org.springframework.security.web.access.ExceptionTranslationFilter@1771d6a5, org.springframework.security.web.access.intercept.AuthorizationFilter@496c6d94]
+2024-01-03T15:34:37.563-05:00  INFO 10760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:34:37.568-05:00  INFO 10760 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.869 seconds (process running for 2.143)
+2024-01-03T15:34:42.679-05:00  INFO 10760 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:34:42.679-05:00  INFO 10760 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:34:42.680-05:00  INFO 10760 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:37:03.902-05:00  INFO 10760 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:37:03.920-05:00  INFO 10760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:37:03.921-05:00  INFO 10760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:38:28.401-05:00  INFO 11883 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 11883 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:38:28.403-05:00  INFO 11883 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:38:28.710-05:00  INFO 11883 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:38:28.738-05:00  INFO 11883 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:38:29.011-05:00  INFO 11883 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:38:29.016-05:00  INFO 11883 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:38:29.016-05:00  INFO 11883 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:38:29.055-05:00  INFO 11883 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:38:29.055-05:00  INFO 11883 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 633 ms
+2024-01-03T15:38:29.111-05:00  INFO 11883 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:38:29.148-05:00  INFO 11883 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:38:29.150-05:00  INFO 11883 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:38:29.207-05:00  INFO 11883 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:38:29.282-05:00  INFO 11883 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:38:29.292-05:00  INFO 11883 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:38:29.371-05:00  INFO 11883 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1471b98d
+2024-01-03T15:38:29.372-05:00  INFO 11883 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:38:29.471-05:00  INFO 11883 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:38:29.766-05:00  INFO 11883 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:38:29.774-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:29.774-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:38:29.774-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:29.774-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:38:29.775-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:29.775-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:38:29.775-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:29.775-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:38:29.775-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:29.775-05:00  WARN 11883 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:38:29.798-05:00  INFO 11883 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:38:30.030-05:00  WARN 11883 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:38:30.159-05:00  INFO 11883 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2d5435d4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dbdbb69, org.springframework.security.web.context.SecurityContextHolderFilter@1f847d9e, org.springframework.security.web.header.HeaderWriterFilter@1d7d968c, org.springframework.security.web.authentication.logout.LogoutFilter@24e79a4d, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@728535c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6265a548, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67730dab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@576a8b00, org.springframework.security.web.session.SessionManagementFilter@402c415e, org.springframework.security.web.access.ExceptionTranslationFilter@64c37088, org.springframework.security.web.access.intercept.AuthorizationFilter@24fc9aa5]
+2024-01-03T15:38:30.271-05:00  INFO 11883 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:38:30.276-05:00  INFO 11883 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 2.083 seconds (process running for 2.487)
+2024-01-03T15:38:36.498-05:00  INFO 11883 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:38:36.499-05:00  INFO 11883 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:38:36.500-05:00  INFO 11883 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:38:51.477-05:00  INFO 11883 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:38:51.488-05:00  INFO 11883 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:38:51.489-05:00  INFO 11883 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:38:53.373-05:00  INFO 11922 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 11922 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:38:53.376-05:00  INFO 11922 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:38:53.671-05:00  INFO 11922 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:38:53.697-05:00  INFO 11922 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:38:53.973-05:00  INFO 11922 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:38:53.978-05:00  INFO 11922 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:38:53.978-05:00  INFO 11922 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:38:54.012-05:00  INFO 11922 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:38:54.012-05:00  INFO 11922 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 609 ms
+2024-01-03T15:38:54.071-05:00  INFO 11922 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:38:54.096-05:00  INFO 11922 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:38:54.097-05:00  INFO 11922 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:38:54.145-05:00  INFO 11922 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:38:54.209-05:00  INFO 11922 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:38:54.218-05:00  INFO 11922 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:38:54.272-05:00  INFO 11922 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ab63838
+2024-01-03T15:38:54.274-05:00  INFO 11922 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:38:54.391-05:00  INFO 11922 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:38:54.728-05:00  INFO 11922 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:38:54.735-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:54.736-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:38:54.736-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:54.736-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:38:54.736-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:54.736-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:38:54.736-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:54.736-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:38:54.737-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:38:54.737-05:00  WARN 11922 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:38:54.753-05:00  INFO 11922 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:38:54.962-05:00  WARN 11922 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:38:55.094-05:00  INFO 11922 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1db5de29, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64d1f549, org.springframework.security.web.context.SecurityContextHolderFilter@55c581e4, org.springframework.security.web.header.HeaderWriterFilter@6e069ca9, org.springframework.security.web.authentication.logout.LogoutFilter@34588991, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@4536a09a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6eae3730, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a7bd9a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fb61db4, org.springframework.security.web.session.SessionManagementFilter@493250cf, org.springframework.security.web.access.ExceptionTranslationFilter@3f22ce2a, org.springframework.security.web.access.intercept.AuthorizationFilter@68722de3]
+2024-01-03T15:38:55.248-05:00  INFO 11922 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:38:55.252-05:00  INFO 11922 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 2.121 seconds (process running for 2.426)
+2024-01-03T15:39:05.999-05:00  INFO 11922 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:39:06.000-05:00  INFO 11922 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:39:06.001-05:00  INFO 11922 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:40:59.818-05:00  INFO 11922 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:40:59.827-05:00  INFO 11922 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:40:59.828-05:00  INFO 11922 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:41:01.798-05:00  INFO 11992 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 11992 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:41:01.802-05:00  INFO 11992 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:41:02.203-05:00  INFO 11992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:41:02.228-05:00  INFO 11992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:41:02.481-05:00  INFO 11992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:41:02.485-05:00  INFO 11992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:41:02.485-05:00  INFO 11992 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:41:02.525-05:00  INFO 11992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:41:02.525-05:00  INFO 11992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 702 ms
+2024-01-03T15:41:02.578-05:00  INFO 11992 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:41:02.602-05:00  INFO 11992 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:41:02.603-05:00  INFO 11992 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:41:02.651-05:00  INFO 11992 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:41:02.717-05:00  INFO 11992 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:41:02.726-05:00  INFO 11992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:41:02.776-05:00  INFO 11992 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@370c7cc5
+2024-01-03T15:41:02.777-05:00  INFO 11992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:41:02.869-05:00  INFO 11992 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:41:03.157-05:00  INFO 11992 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:41:03.165-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:41:03.166-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:41:03.166-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:41:03.166-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:41:03.166-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:41:03.166-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:41:03.167-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:41:03.167-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:41:03.167-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:41:03.167-05:00  WARN 11992 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:41:03.187-05:00  INFO 11992 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:41:03.413-05:00  WARN 11992 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:41:03.532-05:00  INFO 11992 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15afebcc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68722de3, org.springframework.security.web.context.SecurityContextHolderFilter@15a6a91f, org.springframework.security.web.header.HeaderWriterFilter@3f12676, org.springframework.security.web.authentication.logout.LogoutFilter@3e755d5f, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@603faaad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24888d8b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eae3730, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b18009f, org.springframework.security.web.session.SessionManagementFilter@48928b57, org.springframework.security.web.access.ExceptionTranslationFilter@6ddbbfbb, org.springframework.security.web.access.intercept.AuthorizationFilter@458704ee]
+2024-01-03T15:41:03.637-05:00  INFO 11992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:41:03.642-05:00  INFO 11992 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 2.024 seconds (process running for 2.293)
+2024-01-03T15:41:06.850-05:00  INFO 11992 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:41:06.851-05:00  INFO 11992 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:41:06.852-05:00  INFO 11992 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:42:47.453-05:00  INFO 11992 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:42:47.488-05:00  INFO 11992 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:42:47.489-05:00  INFO 11992 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:42:49.239-05:00  INFO 12057 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 12057 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:42:49.242-05:00  INFO 12057 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:42:49.543-05:00  INFO 12057 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:42:49.572-05:00  INFO 12057 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:42:49.804-05:00  INFO 12057 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:42:49.810-05:00  INFO 12057 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:42:49.817-05:00  INFO 12057 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:42:49.859-05:00  INFO 12057 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:42:49.859-05:00  INFO 12057 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 595 ms
+2024-01-03T15:42:49.915-05:00  INFO 12057 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:42:49.954-05:00  INFO 12057 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:42:49.955-05:00  INFO 12057 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:42:50.003-05:00  INFO 12057 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:42:50.070-05:00  INFO 12057 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:42:50.079-05:00  INFO 12057 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:42:50.130-05:00  INFO 12057 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ab63838
+2024-01-03T15:42:50.130-05:00  INFO 12057 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:42:50.222-05:00  INFO 12057 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:42:50.503-05:00  INFO 12057 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:42:50.513-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:42:50.513-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:42:50.513-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:42:50.513-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:42:50.513-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:42:50.513-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:42:50.514-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:42:50.514-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:42:50.514-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:42:50.514-05:00  WARN 12057 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:42:50.537-05:00  INFO 12057 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:42:50.732-05:00  WARN 12057 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:42:50.849-05:00  INFO 12057 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d195d15, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17b387ef, org.springframework.security.web.context.SecurityContextHolderFilter@15afebcc, org.springframework.security.web.header.HeaderWriterFilter@2b18b308, org.springframework.security.web.authentication.logout.LogoutFilter@1f847d9e, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@4536a09a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b18009f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fb61db4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@489b7559, org.springframework.security.web.session.SessionManagementFilter@458704ee, org.springframework.security.web.access.ExceptionTranslationFilter@1771d6a5, org.springframework.security.web.access.intercept.AuthorizationFilter@496c6d94]
+2024-01-03T15:42:50.948-05:00  INFO 12057 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:42:50.953-05:00  INFO 12057 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.885 seconds (process running for 2.153)
+2024-01-03T15:42:53.431-05:00  INFO 12057 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:42:53.431-05:00  INFO 12057 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:42:53.432-05:00  INFO 12057 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:43:38.860-05:00  INFO 12057 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:43:38.882-05:00  INFO 12057 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:43:38.883-05:00  INFO 12057 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:43:40.643-05:00  INFO 12131 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 12131 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:43:40.645-05:00  INFO 12131 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:43:40.944-05:00  INFO 12131 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:43:40.968-05:00  INFO 12131 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:43:41.198-05:00  INFO 12131 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:43:41.202-05:00  INFO 12131 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:43:41.202-05:00  INFO 12131 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:43:41.235-05:00  INFO 12131 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:43:41.236-05:00  INFO 12131 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 569 ms
+2024-01-03T15:43:41.288-05:00  INFO 12131 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:43:41.322-05:00  INFO 12131 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:43:41.324-05:00  INFO 12131 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:43:41.370-05:00  INFO 12131 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:43:41.438-05:00  INFO 12131 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:43:41.447-05:00  INFO 12131 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:43:41.499-05:00  INFO 12131 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@62e73ab6
+2024-01-03T15:43:41.500-05:00  INFO 12131 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:43:41.593-05:00  INFO 12131 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:43:41.870-05:00  INFO 12131 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:43:41.878-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:43:41.879-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:43:41.879-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:43:41.879-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:43:41.879-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:43:41.880-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:43:41.880-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:43:41.880-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:43:41.880-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:43:41.880-05:00  WARN 12131 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:43:41.903-05:00  INFO 12131 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:43:42.099-05:00  WARN 12131 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:43:42.227-05:00  INFO 12131 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6265a548, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e51ede1, org.springframework.security.web.context.SecurityContextHolderFilter@4202276, org.springframework.security.web.header.HeaderWriterFilter@52b32622, org.springframework.security.web.authentication.logout.LogoutFilter@451cef67, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@42028589, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34588991, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@758655a9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12051d38, org.springframework.security.web.session.SessionManagementFilter@2e015ac1, org.springframework.security.web.access.ExceptionTranslationFilter@77fecd2c, org.springframework.security.web.access.intercept.AuthorizationFilter@3f5e64c9]
+2024-01-03T15:43:42.327-05:00  INFO 12131 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:43:42.332-05:00  INFO 12131 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.872 seconds (process running for 2.13)
+2024-01-03T15:43:45.791-05:00  INFO 12131 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:43:45.793-05:00  INFO 12131 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:43:45.794-05:00  INFO 12131 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:44:55.582-05:00  INFO 12131 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:44:55.594-05:00  INFO 12131 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:44:55.595-05:00  INFO 12131 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:44:57.404-05:00  INFO 12180 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 12180 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:44:57.408-05:00  INFO 12180 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:44:57.699-05:00  INFO 12180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:44:57.724-05:00  INFO 12180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:44:57.939-05:00  INFO 12180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:44:57.943-05:00  INFO 12180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:44:57.944-05:00  INFO 12180 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:44:57.976-05:00  INFO 12180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:44:57.976-05:00  INFO 12180 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
+2024-01-03T15:44:58.027-05:00  INFO 12180 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:44:58.056-05:00  INFO 12180 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:44:58.058-05:00  INFO 12180 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:44:58.104-05:00  INFO 12180 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:44:58.165-05:00  INFO 12180 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:44:58.176-05:00  INFO 12180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:44:58.231-05:00  INFO 12180 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@370c7cc5
+2024-01-03T15:44:58.232-05:00  INFO 12180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:44:58.322-05:00  INFO 12180 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:44:58.593-05:00  INFO 12180 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:44:58.600-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:44:58.600-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:44:58.601-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:44:58.601-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:44:58.601-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:44:58.601-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:44:58.601-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:44:58.602-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:44:58.603-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:44:58.603-05:00  WARN 12180 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:44:58.633-05:00  INFO 12180 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:44:58.824-05:00  WARN 12180 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:44:58.937-05:00  INFO 12180 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b18009f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77aeba9b, org.springframework.security.web.context.SecurityContextHolderFilter@24888d8b, org.springframework.security.web.header.HeaderWriterFilter@3f22ce2a, org.springframework.security.web.authentication.logout.LogoutFilter@4202276, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@603faaad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55c581e4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b3a3a92, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1db5de29, org.springframework.security.web.session.SessionManagementFilter@1c09bb7a, org.springframework.security.web.access.ExceptionTranslationFilter@3f12676, org.springframework.security.web.access.intercept.AuthorizationFilter@5243d730]
+2024-01-03T15:44:59.047-05:00  INFO 12180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:44:59.052-05:00  INFO 12180 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.822 seconds (process running for 2.083)
+2024-01-03T15:45:02.108-05:00  INFO 12180 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:45:02.108-05:00  INFO 12180 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:45:02.109-05:00  INFO 12180 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:45:23.057-05:00  INFO 12180 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:45:23.072-05:00  INFO 12180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:45:23.073-05:00  INFO 12180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:45:24.730-05:00  INFO 12207 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 12207 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:45:24.732-05:00  INFO 12207 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:45:25.014-05:00  INFO 12207 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:45:25.045-05:00  INFO 12207 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:45:25.258-05:00  INFO 12207 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:45:25.262-05:00  INFO 12207 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:45:25.262-05:00  INFO 12207 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:45:25.294-05:00  INFO 12207 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:45:25.295-05:00  INFO 12207 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 542 ms
+2024-01-03T15:45:25.344-05:00  INFO 12207 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:45:25.371-05:00  INFO 12207 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:45:25.372-05:00  INFO 12207 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:45:25.418-05:00  INFO 12207 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:45:25.482-05:00  INFO 12207 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:45:25.491-05:00  INFO 12207 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:45:25.551-05:00  INFO 12207 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3af236d0
+2024-01-03T15:45:25.552-05:00  INFO 12207 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:45:25.644-05:00  INFO 12207 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:45:25.917-05:00  INFO 12207 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:45:25.924-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:45:25.924-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:45:25.924-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:45:25.924-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:45:25.925-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:45:25.925-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:45:25.925-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:45:25.925-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:45:25.925-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:45:25.925-05:00  WARN 12207 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:45:25.944-05:00  INFO 12207 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:45:26.139-05:00  WARN 12207 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:45:26.261-05:00  INFO 12207 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e51ede1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12051d38, org.springframework.security.web.context.SecurityContextHolderFilter@2053b761, org.springframework.security.web.header.HeaderWriterFilter@7fb1820d, org.springframework.security.web.authentication.logout.LogoutFilter@11fb1691, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@19855799, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d01b609, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@458704ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28f3a218, org.springframework.security.web.session.SessionManagementFilter@3e755d5f, org.springframework.security.web.access.ExceptionTranslationFilter@5ee95d42, org.springframework.security.web.access.intercept.AuthorizationFilter@1f847d9e]
+2024-01-03T15:45:26.364-05:00  INFO 12207 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:45:26.369-05:00  INFO 12207 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.808 seconds (process running for 2.107)
+2024-01-03T15:45:29.009-05:00  INFO 12207 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:45:29.011-05:00  INFO 12207 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:45:29.012-05:00  INFO 12207 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:54:11.908-05:00  INFO 12207 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:54:11.938-05:00  INFO 12207 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:54:11.939-05:00  INFO 12207 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:54:13.714-05:00  INFO 12500 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 12500 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:54:13.716-05:00  INFO 12500 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:54:14.009-05:00  INFO 12500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:54:14.035-05:00  INFO 12500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:54:14.259-05:00  INFO 12500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:54:14.264-05:00  INFO 12500 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:54:14.264-05:00  INFO 12500 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:54:14.295-05:00  INFO 12500 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:54:14.296-05:00  INFO 12500 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 559 ms
+2024-01-03T15:54:14.346-05:00  INFO 12500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:54:14.374-05:00  INFO 12500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:54:14.376-05:00  INFO 12500 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:54:14.423-05:00  INFO 12500 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:54:14.492-05:00  INFO 12500 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:54:14.501-05:00  INFO 12500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:54:14.552-05:00  INFO 12500 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2eb1c615
+2024-01-03T15:54:14.554-05:00  INFO 12500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:54:14.645-05:00  INFO 12500 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:54:14.921-05:00  INFO 12500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:54:14.928-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:54:14.928-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:54:14.929-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:54:14.929-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:54:14.929-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:54:14.929-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:54:14.929-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:54:14.930-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:54:14.930-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:54:14.930-05:00  WARN 12500 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:54:14.953-05:00  INFO 12500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:54:15.147-05:00  WARN 12500 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:54:15.263-05:00  INFO 12500 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4202276, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2053b761, org.springframework.security.web.context.SecurityContextHolderFilter@45e9db77, org.springframework.security.web.header.HeaderWriterFilter@48a38a12, org.springframework.security.web.authentication.logout.LogoutFilter@6a30f6b1, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@d99df7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e69bf78, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68dc2f53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34588991, org.springframework.security.web.session.SessionManagementFilter@3f22ce2a, org.springframework.security.web.access.ExceptionTranslationFilter@45482f82, org.springframework.security.web.access.intercept.AuthorizationFilter@2e015ac1]
+2024-01-03T15:54:15.370-05:00  INFO 12500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:54:15.374-05:00  INFO 12500 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.832 seconds (process running for 2.079)
+2024-01-03T15:54:17.525-05:00  INFO 12500 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:54:17.527-05:00  INFO 12500 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:54:17.528-05:00  INFO 12500 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-01-03T15:54:20.513-05:00  INFO 12500 --- [http-nio-8080-exec-3] c.T.FitNetServer.api.auth.AuthService    : User authentication: UsernamePasswordAuthenticationToken [Principal=testuser, Credentials=[PROTECTED], Authenticated=false, Details=null, Granted Authorities=[]]
+2024-01-03T15:55:10.774-05:00  INFO 12500 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:55:10.789-05:00  INFO 12500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:55:10.790-05:00  INFO 12500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:55:12.486-05:00  INFO 12538 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 12538 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:55:12.487-05:00  INFO 12538 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:55:12.778-05:00  INFO 12538 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:55:12.805-05:00  INFO 12538 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:55:13.033-05:00  INFO 12538 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:55:13.037-05:00  INFO 12538 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:55:13.037-05:00  INFO 12538 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:55:13.073-05:00  INFO 12538 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:55:13.073-05:00  INFO 12538 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 565 ms
+2024-01-03T15:55:13.125-05:00  INFO 12538 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:55:13.147-05:00  INFO 12538 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:55:13.149-05:00  INFO 12538 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:55:13.197-05:00  INFO 12538 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:55:13.262-05:00  INFO 12538 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:55:13.273-05:00  INFO 12538 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:55:13.332-05:00  INFO 12538 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6793f752
+2024-01-03T15:55:13.333-05:00  INFO 12538 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:55:13.424-05:00  INFO 12538 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:55:13.710-05:00  INFO 12538 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:55:13.718-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:55:13.718-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:55:13.719-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:55:13.719-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:55:13.719-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:55:13.719-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:55:13.719-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:55:13.719-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:55:13.720-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:55:13.720-05:00  WARN 12538 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:55:13.744-05:00  INFO 12538 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:55:13.940-05:00  WARN 12538 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:55:14.062-05:00  INFO 12538 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40ebb56, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b2fc2c0, org.springframework.security.web.context.SecurityContextHolderFilter@1d7d968c, org.springframework.security.web.header.HeaderWriterFilter@64d1f549, org.springframework.security.web.authentication.logout.LogoutFilter@682d8dad, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@3a66d97e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fe77a97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11fb1691, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33197c2f, org.springframework.security.web.session.SessionManagementFilter@3c862522, org.springframework.security.web.access.ExceptionTranslationFilter@77aeba9b, org.springframework.security.web.access.intercept.AuthorizationFilter@6b468710]
+2024-01-03T15:55:14.170-05:00  INFO 12538 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:55:14.175-05:00  INFO 12538 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.871 seconds (process running for 2.145)
+2024-01-03T15:55:17.743-05:00  INFO 12538 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:55:17.745-05:00  INFO 12538 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:55:17.746-05:00  INFO 12538 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:57:28.417-05:00  INFO 12538 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:57:28.425-05:00  INFO 12538 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-03T15:57:28.426-05:00  INFO 12538 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-03T15:57:30.246-05:00  INFO 12623 --- [main] c.T.F.FitNetServerApplication            : Starting FitNetServerApplication using Java 20 with PID 12623 (/Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server/target/classes started by turnernaef in /Users/turnernaef/Documents/Source/Personal/Projects/Web-Dev/FitNet/FitNet-Server)
+2024-01-03T15:57:30.250-05:00  INFO 12623 --- [main] c.T.F.FitNetServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-03T15:57:30.536-05:00  INFO 12623 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-03T15:57:30.563-05:00  INFO 12623 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2024-01-03T15:57:30.795-05:00  INFO 12623 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-03T15:57:30.800-05:00  INFO 12623 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-03T15:57:30.800-05:00  INFO 12623 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-01-03T15:57:30.837-05:00  INFO 12623 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-03T15:57:30.837-05:00  INFO 12623 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 557 ms
+2024-01-03T15:57:30.899-05:00  INFO 12623 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-03T15:57:30.925-05:00  INFO 12623 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-01-03T15:57:30.926-05:00  INFO 12623 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-03T15:57:30.979-05:00  INFO 12623 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:57:31.050-05:00  INFO 12623 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-03T15:57:31.058-05:00  INFO 12623 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-03T15:57:31.105-05:00  INFO 12623 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5ebbde60
+2024-01-03T15:57:31.106-05:00  INFO 12623 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-03T15:57:31.204-05:00  INFO 12623 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-01-03T15:57:31.513-05:00  INFO 12623 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-03T15:57:31.521-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:57:31.521-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "completed_workouts" does not exist, skipping
+2024-01-03T15:57:31.521-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:57:31.521-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "completed_workouts" does not exist, skipping
+2024-01-03T15:57:31.521-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:57:31.521-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_entity" does not exist, skipping
+2024-01-03T15:57:31.522-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:57:31.522-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "completed_workouts_sequence" does not exist, skipping
+2024-01-03T15:57:31.522-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-03T15:57:31.522-05:00  WARN 12623 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "user_account_sequence" does not exist, skipping
+2024-01-03T15:57:31.538-05:00  INFO 12623 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-03T15:57:31.736-05:00  WARN 12623 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-03T15:57:31.855-05:00  INFO 12623 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6addfa22, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74b521c, org.springframework.security.web.context.SecurityContextHolderFilter@7a7bd9a8, org.springframework.security.web.header.HeaderWriterFilter@5bfdc92b, org.springframework.security.web.authentication.logout.LogoutFilter@45b2d17b, com.TCorp.FitNetServer.api.security.JwtAuthenticationFilter@e344f14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1832b0f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a1e578f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@672f69f7, org.springframework.security.web.session.SessionManagementFilter@42095996, org.springframework.security.web.access.ExceptionTranslationFilter@24d097c8, org.springframework.security.web.access.intercept.AuthorizationFilter@1d4e06bb]
+2024-01-03T15:57:31.959-05:00  INFO 12623 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-03T15:57:31.963-05:00  INFO 12623 --- [main] c.T.F.FitNetServerApplication            : Started FitNetServerApplication in 1.912 seconds (process running for 2.185)
+2024-01-03T15:57:36.540-05:00  INFO 12623 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-03T15:57:36.545-05:00  INFO 12623 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-03T15:57:36.546-05:00  INFO 12623 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-03T15:57:43.503-05:00  INFO 12623 --- [http-nio-8080-exec-4] c.T.FitNetServer.api.auth.AuthService    : User authentication: UsernamePasswordAuthenticationToken [Principal=testuser, Credentials=[PROTECTED], Authenticated=false, Details=null, Granted Authorities=[]]
