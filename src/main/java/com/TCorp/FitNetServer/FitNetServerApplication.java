@@ -24,9 +24,10 @@ public class FitNetServerApplication {
 		Map<String, Object> apiData = Map.of( "version", "V1");
 		return ResponseEntity.ok(
 				ResponseGlobal.builder()
+						.code(200)
 						.message("Successfully retrieved root status")
-						.success(true)
-						.responsesMultiple(apiData)
+						.status(true)
+						.data(apiData)
 						.build()
 		);
 	}

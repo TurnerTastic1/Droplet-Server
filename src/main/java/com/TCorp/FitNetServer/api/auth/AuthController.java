@@ -31,9 +31,10 @@ public class AuthController {
 
         return ResponseEntity.ok(
                 ResponseGlobal.builder()
+                        .code(200)
                         .message("Successfully registered new user")
-                        .success(true)
-                        .responsesMultiple(Map.of("auth", serviceResponse))
+                        .status(true)
+                        .data(Map.of("auth", serviceResponse))
                         .build()
         );
     }
@@ -44,9 +45,10 @@ public class AuthController {
 
         return ResponseEntity.ok(
                 ResponseGlobal.builder()
-                        .message("Successfully registered new user")
-                        .success(true)
-                        .responsesMultiple(Map.of("auth", serviceResponse))
+                        .code(200)
+                        .message("Successfully authenticated user")
+                        .status(true)
+                        .data(Map.of("auth", serviceResponse))
                         .build()
         );
     }

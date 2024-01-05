@@ -1,5 +1,6 @@
 package com.TCorp.FitNetServer.api.exception;
 
+import com.TCorp.FitNetServer.api.response.ResponseGlobal;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.boot.web.servlet.error.ErrorController;
@@ -23,38 +24,55 @@ public class GlobalExceptionHandler implements ErrorController {
     }
 
     @RequestMapping("/error")
-    public ResponseEntity<Map<String, Object>> handleError(HttpServletRequest request) {
+    public ResponseEntity<ResponseGlobal> handleError(HttpServletRequest request) {
         HttpStatus httpStatus = getHttpStatus(request);
         String message = getErrorMessage(request, httpStatus);
 
         Map<String, Object> response = new HashMap<>();
-        response.put("status", false);
-        response.put("code", httpStatus.value());
         response.put("message", message);
         response.put("errors", Collections.singletonList(message));
 
-        return ResponseEntity.status(httpStatus).body(response);
+        return ResponseEntity.status(httpStatus).body(
+                ResponseGlobal.builder()
+                        .code(httpStatus.value())
+                        .message(message)
+                        .status(false)
+                        .data(response)
+                        .build()
+        );
     }
 
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
-    public ResponseEntity<Map<String, Object>> handleError(HttpRequestMethodNotSupportedException e) {
+    public ResponseEntity<ResponseGlobal> handleError(HttpRequestMethodNotSupportedException e) {
         String message = e.getMessage();
         Map<String, Object> response = new HashMap<>();
-        response.put("status", false);
-        response.put("code", HttpStatus.METHOD_NOT_ALLOWED);
         response.put("message", "It seems you're using the wrong HTTP method");
         response.put("errors", Collections.singletonList(message));
-        return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).body(response);
+
+        return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).body(
+                ResponseGlobal.builder()
+                        .code(HttpStatus.METHOD_NOT_ALLOWED.value())
+                        .message(message)
+                        .status(false)
+                        .data(response)
+                        .build()
+        );
     }
 
     @ExceptionHandler(CustomException.class)
-    public ResponseEntity<Map<String, Object>> handleError(CustomException e) {
+    public ResponseEntity<ResponseGlobal> handleError(CustomException e) {
         Map<String, Object> response = new HashMap<>();
-        response.put("status", false);
-        response.put("code", e.getHttpStatus().value());
         response.put("message", e.getMessage());
         response.put("errors", e.getErrors());
-        return ResponseEntity.status(e.getHttpStatus()).body(response);
+
+        return ResponseEntity.status(e.getHttpStatus()).body(
+                ResponseGlobal.builder()
+                        .code(e.getHttpStatus().value())
+                        .message(e.getMessage())
+                        .status(false)
+                        .data(response)
+                        .build()
+        );
     }
 
 

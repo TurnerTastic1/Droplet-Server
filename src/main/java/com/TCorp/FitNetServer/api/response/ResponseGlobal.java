@@ -21,12 +21,15 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ResponseGlobal {
+    @JsonProperty("code")
+    private Integer code;
+
     @JsonProperty("message")
     private String message;
 
-    @JsonProperty("success")
-    private Boolean success;
+    @JsonProperty("status")
+    private Boolean status;
 
     @JsonProperty("data")
-    private Map<String, Object> responsesMultiple;
+    private Map<String, Object> data;
 }
