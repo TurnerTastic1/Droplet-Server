@@ -1,7 +1,5 @@
-package com.TCorp.FitNetServer.api.controller;
+package com.TCorp.FitNetServer.api.routes.user;
 
-import com.TCorp.FitNetServer.api.model.UserEntity;
-import com.TCorp.FitNetServer.api.service.UserEntityService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,11 +13,6 @@ public class UserEntityController {
 
     public UserEntityController(UserEntityService userAccService) {
         this.userAccService = userAccService;
-    }
-
-    @GetMapping("health-check")
-    public ResponseEntity<Map<String, Object>> hello() {
-        return ResponseEntity.ok(Map.of("message", "Hello World from user controller!"));
     }
 
     @GetMapping("get-all-users")

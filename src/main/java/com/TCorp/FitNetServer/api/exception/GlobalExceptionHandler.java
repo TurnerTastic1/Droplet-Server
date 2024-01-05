@@ -7,6 +7,7 @@ import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController
+@RestController()
 @RestControllerAdvice
 public class GlobalExceptionHandler implements ErrorController {
 
@@ -53,6 +54,22 @@ public class GlobalExceptionHandler implements ErrorController {
                 ResponseGlobal.builder()
                         .code(HttpStatus.METHOD_NOT_ALLOWED.value())
                         .message(message)
+                        .status(false)
+                        .data(response)
+                        .build()
+        );
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ResponseGlobal> handleError(MethodArgumentNotValidException e) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("message", "Validation failed");
+        response.put("errors", e.getBindingResult().getAllErrors());
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+                ResponseGlobal.builder()
+                        .code(HttpStatus.BAD_REQUEST.value())
+                        .message("Validation failed")
                         .status(false)
                         .data(response)
                         .build()

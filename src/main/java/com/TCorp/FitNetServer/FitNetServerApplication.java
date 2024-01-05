@@ -15,7 +15,6 @@ import java.util.Map;
 public class FitNetServerApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Starting FitNetServerApplication...");
 		SpringApplication.run(FitNetServerApplication.class, args);
 	}
 

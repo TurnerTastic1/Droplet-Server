@@ -1,4 +1,4 @@
-package com.TCorp.FitNetServer.api.service;
+package com.TCorp.FitNetServer.api.routes.user;
 
 import com.TCorp.FitNetServer.api.exception.CustomException;
 import com.TCorp.FitNetServer.api.model.UserEntity;

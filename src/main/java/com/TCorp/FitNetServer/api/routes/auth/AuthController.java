@@ -1,4 +1,4 @@
-package com.TCorp.FitNetServer.api.auth;
+package com.TCorp.FitNetServer.api.routes.auth;
 
 import com.TCorp.FitNetServer.api.dto.AuthenticationDto;
 import com.TCorp.FitNetServer.api.dto.RegisterDto;

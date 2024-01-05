@@ -1,4 +1,4 @@
-package com.TCorp.FitNetServer.api.auth;
+package com.TCorp.FitNetServer.api.routes.auth;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.TCorp.FitNetServer.api.auth;
+package com.TCorp.FitNetServer.api.routes.auth;
 
 import com.TCorp.FitNetServer.api.dto.AuthenticationDto;
 import com.TCorp.FitNetServer.api.dto.RegisterDto;
@@ -9,7 +9,6 @@ import com.TCorp.FitNetServer.api.repository.UserEntityRepository;
 import com.TCorp.FitNetServer.api.security.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -66,12 +65,6 @@ public class AuthService {
         newUserEntity.setUsername(registerDto.getUsername());
         newUserEntity.setPassword(passwordEncoder.encode(registerDto.getPassword()));
         newUserEntity.setEmail(registerDto.getEmail());
-
-//        Optional<Role> role = roleRepository.findRoleByName("USER");
-//        if (role.isEmpty()) {
-//            throw new RuntimeException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to add user roles");
-//        }
-
         newUserEntity.setRole(Role.USER);
 
 

@@ -36,7 +36,7 @@ public class CompletedWorkout {
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private UserEntity userId;
+    private UserEntity user;
 
     private String name;
     private WorkoutType workoutType;

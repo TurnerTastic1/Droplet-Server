@@ -20,7 +20,7 @@ import java.io.IOException;
  * File: JwtAuthenticationFilter
  * Author: turnernaef
  * Date: 11/3/23
- * Description:
+ * Description: This file contains the JwtAuthenticationFilter class, which is used to filter requests for JWTs.
  */
 
 @Component

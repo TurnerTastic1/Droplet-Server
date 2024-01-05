@@ -1,15 +1,17 @@
 package com.TCorp.FitNetServer.api.exception;
 
+import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 import java.util.Collections;
 import java.util.List;
 
+@Getter
 public class CustomException extends java.lang.RuntimeException {
 
-        private HttpStatus httpStatus;
-        private List<String> errors;
-        private Object data;
+        private final HttpStatus httpStatus;
+        private final List<String> errors;
+        private final Object data;
 
         public CustomException(HttpStatus httpStatus, String message) {
             this(httpStatus, message, Collections.singletonList(message), null);
@@ -25,18 +27,6 @@ public class CustomException extends java.lang.RuntimeException {
 //            this.message = message;
             this.errors = errors;
             this.data = data;
-        }
-
-        public HttpStatus getHttpStatus() {
-        return httpStatus;
-    }
-
-        public List<String> getErrors() {
-        return errors;
-    }
-
-        public Object getData() {
-            return data;
         }
 
 }
