@@ -3,6 +3,7 @@ package com.TCorp.FitNetServer.api.routes.auth;
 import com.TCorp.FitNetServer.api.dto.AuthenticationDto;
 import com.TCorp.FitNetServer.api.dto.RegisterDto;
 import com.TCorp.FitNetServer.api.response.ResponseGlobal;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +27,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<ResponseGlobal> register(@RequestBody RegisterDto registerDto) {
+    public ResponseEntity<ResponseGlobal> register(@Valid @RequestBody RegisterDto registerDto) {
         AuthenticationResponse serviceResponse = AuthService.register(registerDto);
 
         return ResponseEntity.ok(
@@ -40,7 +41,7 @@ public class AuthController {
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<ResponseGlobal> authenticate(@RequestBody AuthenticationDto authenticationDto) {
+    public ResponseEntity<ResponseGlobal> authenticate(@Valid @RequestBody AuthenticationDto authenticationDto) {
         AuthenticationResponse serviceResponse = AuthService.authenticate(authenticationDto);
 
         return ResponseEntity.ok(

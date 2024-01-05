@@ -7,8 +7,10 @@ import com.TCorp.FitNetServer.api.model.Role;
 import com.TCorp.FitNetServer.api.model.UserEntity;
 import com.TCorp.FitNetServer.api.repository.UserEntityRepository;
 import com.TCorp.FitNetServer.api.security.JwtService;
+import jakarta.validation.constraints.Null;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -16,6 +18,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
 import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,18 +44,7 @@ public class AuthService {
 
     public AuthenticationResponse register(RegisterDto registerDto) {
         List<String> errors = new ArrayList<>();
-        if (registerDto == null) {
-            errors.add("Dto is required");
-        }
-        if (registerDto.getUsername() == null || registerDto.getUsername().isEmpty()) {
-            errors.add("Username is required");
-        }
-        if (registerDto.getEmail() == null || registerDto.getEmail().isEmpty()) {
-            errors.add("Email is required");
-        }
-        if (registerDto.getPassword() == null || registerDto.getPassword().isEmpty()) {
-            errors.add("Password is required");
-        }
+
         if (UserEntityRepo.findUserEntityByEmailOrUsername(registerDto.getEmail(), registerDto.getUsername()).isPresent()) {
             errors.add("Username or email already exists");
         }
@@ -66,7 +58,6 @@ public class AuthService {
         newUserEntity.setPassword(passwordEncoder.encode(registerDto.getPassword()));
         newUserEntity.setEmail(registerDto.getEmail());
         newUserEntity.setRole(Role.USER);
-
 
         try {
             UserEntityRepo.save(newUserEntity);
@@ -83,26 +74,12 @@ public class AuthService {
 
     public AuthenticationResponse authenticate(AuthenticationDto authenticationDto) {
         List<String> errors = new ArrayList<>();
-        if (authenticationDto == null) {
-            errors.add("Dto is required");
-        }
-        if (authenticationDto.getUsername() == null || authenticationDto.getUsername().isEmpty()) {
-            errors.add("Username is required");
-        }
-        if (authenticationDto.getPassword() == null || authenticationDto.getPassword().isEmpty()) {
-            errors.add("Password is required");
-        }
-
-        if (!errors.isEmpty()) {
-            throw new CustomException(HttpStatus.BAD_REQUEST, "Unable to authenticate user - missing some inputs", errors);
-        }
 
         var newUserEntity = UserEntityRepo.findUserEntityByEmailOrUsername(null, authenticationDto.getUsername())
                 .orElseThrow(() -> new CustomException(HttpStatus.BAD_REQUEST, "User not found"));
 
         try {
             Authentication authRequest = UsernamePasswordAuthenticationToken.unauthenticated(authenticationDto.getUsername(), authenticationDto.getPassword());
-            logger.info("User authentication: " + authRequest);
             Authentication authentication = authenticationManager.authenticate(authRequest);
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -115,5 +92,19 @@ public class AuthService {
             errors.add(e.toString());
             throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to authenticate user", errors);
         }
+    }
+
+    public Authentication getSecurityContextHolder() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)) {
+            return authentication;
+        }
+        return null;
+    }
+
+    public UserEntity getUserEntityFromAuthentication() {
+        Authentication authorizedUser = getSecurityContextHolder();
+        return UserEntityRepo.findUserEntityByEmailOrUsername(null, authorizedUser.getName())
+                .orElseThrow(() -> new CustomException(HttpStatus.BAD_REQUEST, "User not found"));
     }
 }

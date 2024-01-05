@@ -4,8 +4,10 @@ import com.TCorp.FitNetServer.api.dto.CompletedWorkoutDto;
 import com.TCorp.FitNetServer.api.exception.CustomException;
 import com.TCorp.FitNetServer.api.model.CompletedWorkout;
 import com.TCorp.FitNetServer.api.repository.CompletedWorkoutRepository;
+import com.TCorp.FitNetServer.api.routes.auth.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,6 +26,7 @@ import java.util.Map;
 public class UserWorkoutService {
 
     private final CompletedWorkoutRepository completedWorkoutRepository;
+    private final AuthService authService;
 
     public Map<String, Object> getAllUserWorkouts() {
         try {
@@ -36,10 +39,20 @@ public class UserWorkoutService {
 
     public Map<String, Object> completeWorkout(CompletedWorkoutDto completedWorkoutDto) {
         List<String> errors = new ArrayList<>();
-        if (completedWorkoutDto == null) {
-            errors.add("Dto is required");
-        }
 
+        Authentication authorizedUser = authService.getSecurityContextHolder();
+        CompletedWorkout completedWorkout = createCompletedWorkoutObject(completedWorkoutDto);
+        completedWorkout.setUser(authService.getUserEntityFromAuthentication());
+
+        try {
+            completedWorkoutRepository.save(completedWorkout);
+            return Map.of("message", "Workout completed! Successfully saved to database.", "user", authorizedUser.getName());
+        } catch (Exception e) {
+            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to save user", errors);
+        }
+    }
+
+    private static CompletedWorkout createCompletedWorkoutObject(CompletedWorkoutDto completedWorkoutDto) {
         CompletedWorkout completedWorkout = new CompletedWorkout();
         completedWorkout.setName(completedWorkoutDto.getName());
         completedWorkout.setWorkoutType(completedWorkoutDto.getWorkoutType());
@@ -47,17 +60,6 @@ public class UserWorkoutService {
         completedWorkout.setDate(completedWorkoutDto.getDate());
         completedWorkout.setDuration(completedWorkoutDto.getDuration());
         completedWorkout.setDistance(completedWorkoutDto.getDistance());
-
-        if (!errors.isEmpty()) {
-            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Error in logic before user save", errors);
-        }
-
-        errors = new ArrayList<>();
-        try {
-            completedWorkoutRepository.save(completedWorkout);
-            return Map.of("message", "Workout completed! Successfully saved to database.");
-        } catch (Exception e) {
-            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to save user", errors);
-        }
+        return completedWorkout;
     }
 }
