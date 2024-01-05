@@ -33,6 +33,18 @@ public class UserWorkoutController {
         );
     }
 
+    @GetMapping("/user-workouts")
+    public ResponseEntity<ResponseGlobal> getUserWorkouts() {
+        return ResponseEntity.ok(
+                ResponseGlobal.builder()
+                        .code(200)
+                        .message("Successfully fetched all user workouts")
+                        .status(true)
+                        .data(userWorkoutService.getUserWorkouts())
+                        .build()
+        );
+    }
+
     @PostMapping("/complete-workout")
     public ResponseEntity<ResponseGlobal> completeWorkout(@Valid @RequestBody CompletedWorkoutDto completedWorkoutDto) {
         return ResponseEntity.ok(

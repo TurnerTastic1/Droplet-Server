@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import static com.TCorp.FitNetServer.api.model.CompletedWorkout.createCompletedWorkoutObject;
+
 /**
  * File: UserWorkoutService
  * Author: turnernaef
@@ -52,14 +54,13 @@ public class UserWorkoutService {
         }
     }
 
-    private static CompletedWorkout createCompletedWorkoutObject(CompletedWorkoutDto completedWorkoutDto) {
-        CompletedWorkout completedWorkout = new CompletedWorkout();
-        completedWorkout.setName(completedWorkoutDto.getName());
-        completedWorkout.setWorkoutType(completedWorkoutDto.getWorkoutType());
-        completedWorkout.setDescription(completedWorkoutDto.getDescription());
-        completedWorkout.setDate(completedWorkoutDto.getDate());
-        completedWorkout.setDuration(completedWorkoutDto.getDuration());
-        completedWorkout.setDistance(completedWorkoutDto.getDistance());
-        return completedWorkout;
+    public Map<String, Object> getUserWorkouts() {
+        try {
+            Authentication authorizedUser = authService.getSecurityContextHolder();
+            List<CompletedWorkout> completedWorkouts = completedWorkoutRepository.findCompletedWorkoutsByUser(authService.getUserEntityFromAuthentication());
+            return (Map.of("Workouts", completedWorkouts, "user", authorizedUser.getName()));
+        } catch (Exception e) {
+            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to fetch workouts from database");
+        }
     }
 }

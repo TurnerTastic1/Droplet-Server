@@ -1,5 +1,6 @@
 package com.TCorp.FitNetServer.api.model;
 
+import com.TCorp.FitNetServer.api.dto.CompletedWorkoutDto;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
@@ -47,5 +48,15 @@ public class CompletedWorkout {
     private Integer distance;
 
 
+    public static CompletedWorkout createCompletedWorkoutObject(CompletedWorkoutDto completedWorkoutDto) {
+        CompletedWorkout completedWorkout = new CompletedWorkout();
+        completedWorkout.setName(completedWorkoutDto.getName());
+        completedWorkout.setWorkoutType(completedWorkoutDto.getWorkoutType());
+        completedWorkout.setDescription(completedWorkoutDto.getDescription());
+        completedWorkout.setDate(completedWorkoutDto.getDate());
+        completedWorkout.setDuration(completedWorkoutDto.getDuration());
+        completedWorkout.setDistance(completedWorkoutDto.getDistance());
+        return completedWorkout;
+    }
 
 }
