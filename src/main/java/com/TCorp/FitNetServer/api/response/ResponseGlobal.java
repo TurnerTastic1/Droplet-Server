@@ -30,6 +30,9 @@ public class ResponseGlobal {
     @JsonProperty("status")
     private Boolean status;
 
+    @JsonProperty("timestamp")
+    private Long timestamp;
+
     @JsonProperty("data")
     private Map<String, Object> data;
 }

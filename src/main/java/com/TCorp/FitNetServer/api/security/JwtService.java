@@ -18,7 +18,7 @@ import java.util.function.Function;
  * File: JwtService
  * Author: turnernaef
  * Date: 11/3/23
- * Description:
+ * Description: This file contains the JwtService class, which is used to handle JWTs.
  */
 
 @Service

@@ -2,6 +2,7 @@ package com.TCorp.FitNetServer.api.routes.auth;
 
 import com.TCorp.FitNetServer.api.dto.AuthenticationDto;
 import com.TCorp.FitNetServer.api.dto.RegisterDto;
+import com.TCorp.FitNetServer.api.dto.TokenValidationDto;
 import com.TCorp.FitNetServer.api.exception.CustomException;
 import com.TCorp.FitNetServer.api.model.Role;
 import com.TCorp.FitNetServer.api.model.UserEntity;
@@ -106,5 +107,15 @@ public class AuthService {
         Authentication authorizedUser = getSecurityContextHolder();
         return UserEntityRepo.findUserEntityByEmailOrUsername(null, authorizedUser.getName())
                 .orElseThrow(() -> new CustomException(HttpStatus.BAD_REQUEST, "User not found"));
+    }
+
+    public Boolean checkExpiredToken(TokenValidationDto tokenValidationDto) {
+        boolean expired;
+        try {
+            expired = jwtService.isTokenExpired(tokenValidationDto.getToken());
+        } catch (Exception e) {
+            throw new CustomException(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to check token validation");
+        }
+        return expired;
     }
 }

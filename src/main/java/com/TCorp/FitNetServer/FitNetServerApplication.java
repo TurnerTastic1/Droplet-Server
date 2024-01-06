@@ -20,12 +20,13 @@ public class FitNetServerApplication {
 
 	@GetMapping("/FitNetServer/api/v1/root-status")
 	public ResponseEntity<ResponseGlobal> hello() {
-		Map<String, Object> apiData = Map.of( "version", "V1");
+		Map<String, Object> apiData = Map.of( "versionData", "V1");
 		return ResponseEntity.ok(
 				ResponseGlobal.builder()
 						.code(200)
 						.message("Successfully retrieved root status")
 						.status(true)
+						.timestamp(System.currentTimeMillis())
 						.data(apiData)
 						.build()
 		);

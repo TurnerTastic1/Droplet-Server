@@ -28,6 +28,7 @@ public class UserWorkoutController {
                         .code(200)
                         .message("Successfully fetched all user workouts")
                         .status(true)
+                        .timestamp(System.currentTimeMillis())
                         .data(userWorkoutService.getAllUserWorkouts())
                         .build()
         );
@@ -40,6 +41,7 @@ public class UserWorkoutController {
                         .code(200)
                         .message("Successfully fetched all user workouts")
                         .status(true)
+                        .timestamp(System.currentTimeMillis())
                         .data(userWorkoutService.getUserWorkouts())
                         .build()
         );
@@ -52,6 +54,7 @@ public class UserWorkoutController {
                         .code(200)
                         .message("Successfully completed workout")
                         .status(true)
+                        .timestamp(System.currentTimeMillis())
                         .data(userWorkoutService.completeWorkout(completedWorkoutDto))
                         .build()
         );
