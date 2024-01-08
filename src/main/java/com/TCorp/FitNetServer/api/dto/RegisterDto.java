@@ -24,7 +24,7 @@ public class RegisterDto {
     private String username;
 
     @NotNull(message = "Password cannot be null")
-    @Size(min = 6, max = 50, message = "Password must be between 6 and 50 characters")
+    @Size(min = 6, max = 100, message = "Password must be between 6 and 100 characters")
     private String password;
 
     @NotNull(message = "Email cannot be null")

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 @RestController()
@@ -29,15 +30,20 @@ public class GlobalExceptionHandler implements ErrorController {
         HttpStatus httpStatus = getHttpStatus(request);
         String message = getErrorMessage(request, httpStatus);
 
+        Map<String, Object> dataBody = new LinkedHashMap<>();
+        dataBody.put("errorMessages", Collections.singletonList(message));
+        dataBody.put("defaultMessage", message);
+
         Map<String, Object> response = new HashMap<>();
         response.put("message", message);
-        response.put("errors", Collections.singletonList(message));
+        response.put("errors", Collections.singletonList(dataBody));
 
         return ResponseEntity.status(httpStatus).body(
                 ResponseGlobal.builder()
                         .code(httpStatus.value())
                         .message(message)
                         .status(false)
+                        .timestamp(System.currentTimeMillis())
                         .data(response)
                         .build()
         );
@@ -46,15 +52,21 @@ public class GlobalExceptionHandler implements ErrorController {
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public ResponseEntity<ResponseGlobal> handleError(HttpRequestMethodNotSupportedException e) {
         String message = e.getMessage();
+
+        Map<String, Object> dataBody = new LinkedHashMap<>();
+        dataBody.put("errorMessages", Collections.singletonList(message));
+        dataBody.put("defaultMessage", message);
+
         Map<String, Object> response = new HashMap<>();
         response.put("message", "It seems you're using the wrong HTTP method");
-        response.put("errors", Collections.singletonList(message));
+        response.put("errors", Collections.singletonList(dataBody));
 
         return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).body(
                 ResponseGlobal.builder()
                         .code(HttpStatus.METHOD_NOT_ALLOWED.value())
                         .message(message)
                         .status(false)
+                        .timestamp(System.currentTimeMillis())
                         .data(response)
                         .build()
         );
@@ -62,15 +74,20 @@ public class GlobalExceptionHandler implements ErrorController {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ResponseGlobal> handleError(MethodArgumentNotValidException e) {
+        Map<String, Object> dataBody = new LinkedHashMap<>();
+        dataBody.put("errorMessages", e.getBindingResult().getAllErrors());
+        dataBody.put("defaultMessage", e.getMessage());
+
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Validation failed");
-        response.put("errors", e.getBindingResult().getAllErrors());
+        response.put("errors", Collections.singletonList(dataBody));
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
                 ResponseGlobal.builder()
                         .code(HttpStatus.BAD_REQUEST.value())
                         .message("Validation failed")
                         .status(false)
+                        .timestamp(System.currentTimeMillis())
                         .data(response)
                         .build()
         );
@@ -78,15 +95,20 @@ public class GlobalExceptionHandler implements ErrorController {
 
     @ExceptionHandler(CustomException.class)
     public ResponseEntity<ResponseGlobal> handleError(CustomException e) {
+        Map<String, Object> dataBody = new LinkedHashMap<>();
+        dataBody.put("errorMessages", e.getErrors());
+        dataBody.put("defaultMessage", e.getMessage());
+
         Map<String, Object> response = new HashMap<>();
         response.put("message", e.getMessage());
-        response.put("errors", e.getErrors());
+        response.put("errors", Collections.singletonList(dataBody));
 
         return ResponseEntity.status(e.getHttpStatus()).body(
                 ResponseGlobal.builder()
                         .code(e.getHttpStatus().value())
                         .message(e.getMessage())
                         .status(false)
+                        .timestamp(System.currentTimeMillis())
                         .data(response)
                         .build()
         );
