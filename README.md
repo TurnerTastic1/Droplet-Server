@@ -1,4 +1,4 @@
-# FitNet-Server
+# Droplet-Server
 This is the server for FitNet. It utilizes Spring Boot and PostgresSQL to provide a RESTful API for the FitNet IOS app.
 
 ## Getting Started
